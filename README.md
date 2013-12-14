@@ -1,7 +1,7 @@
 LaPrensa
 ========
 
-La Prensa Website source code
+La Prensa Website public_html php files
 
 maintained by 
 Juan Alvarez

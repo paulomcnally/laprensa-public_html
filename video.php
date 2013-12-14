@@ -1,5 +1,4 @@
 <?php
-
 define('VIDEOS',true);
 require("../classes/app.class.php");
 require ('../classes/paginador.class.php');

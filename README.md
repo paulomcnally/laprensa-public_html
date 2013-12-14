@@ -4,8 +4,7 @@ LaPrensa
 La Prensa Website source code
 
 maintained by 
-Edwin Collado
-Juan Martinez
+Juan Alvarez
 David Menache
 Shawn Crowe
 

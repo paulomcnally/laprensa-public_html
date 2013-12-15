@@ -1,0 +1,46 @@
+RewriteEngine On
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})$ /$1/$2/$3/ [R]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/$ /index.php?year=$1&month=$2&day=$3 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/suplemento/(.+)/(.+)$ /suplementos.php?year=$1&month=$2&day=$3&uri=$4&idarticulo=$5 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/suplemento/(.+)$ /suplementos.php?year=$1&month=$2&day=$3&uri=$4 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/claves/(.+)$ /claves.php?year=$1&month=$2&day=$3&clave=$4 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)/imprimir$ /imprimir.php?idnoticia=$5 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)/enviar$ /enviar.php?idnoticia=$5 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)/notificar$ /enviar.php?idnoticia=$5&asunto=notificar_error [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)$ /noticia.php?year=$1&month=$2&day=$3&uri=$4&idnoticia=$5 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)$ /noticia.php?year=$1&month=$2&day=$3&uri=$4 [QSA,L]
+# Borrar despues, cuando solo este en tau, todo, sirve para mantener soporte con las noticias de octubre
+RewriteRule ^archivo/(.*)$  http://dev.laprensa.com.ni/archivo/$1 [L,P]
+RewriteRule ^google/(.*)$  http://dev.laprensa.com.ni/google/$1 [L,P]
+RewriteRule ^adsrv/(.*)$  http://dev.laprensa.com.ni/adsrv/$1 [L,P]
+RewriteRule ^cronologico/(.*)$  http://dev.laprensa.com.ni/cronologico/$1 [L,P]
+RewriteRule ^prueba/(.*)$  http://dev.laprensa.com.ni/prueba/$1 [L,P]
+#
+RewriteRule ^entrar$ /access?opt=auth [QSA,L]
+RewriteRule ^registrarse$ /access?opt=viewform [QSA,L]
+RewriteRule ^graph_(.+).png$ /graph.php?idproducto=$1 [QSA,L]
+RewriteRule ^especial/(.+)/(.+)$ /especiales.php?uri=$1&idnota=$2 [QSA,L]
+RewriteRule ^especial/(.+)/?$ /especiales.php?uri=$1 [QSA,L]
+RewriteRule ^infografia/(.+)$ /info.php?idinfografia=$1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.+) /pagina.php?uri=$1 [L]
+
+order deny,allow
+deny from all
+allow from 165.98.184.18
+allow from 190.184.22.23
+allow from 200.62.123.41
+allow from 200.62.123.42
+allow from 200.62.123.183
+allow from 200.62.106.102
+allow from 200.62.106.103
+allow from 208.96.128.4
+allow from 208.96.128.130
+allow from 162.98.136.243
+allow from 190.53.33.23
+allow from 70.85.126.162
+allow from 91.171.116.7
+allow from 174.133.41.90
+allow from 200.62.108.250
+allow from 200.62.108.251

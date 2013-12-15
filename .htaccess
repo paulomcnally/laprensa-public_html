@@ -1,0 +1,207 @@
+# redi session handler
+#php_value session.save_handler redis
+#php_value session.save_path "tcp://10.130.167.131:6379"
+
+RewriteEngine On
+# Redirecting domain without www (e.g. domain.com) to www.domain.com 
+RewriteCond %{HTTP_HOST} !^www
+RewriteRule (.*) http://www.%{HTTP_HOST}/$1 [L,R=301]
+
+#Some redirects by dave Sep14 to help with Alexa ranking
+#Redirect 301 /oldpage.html http://www.example.com/newpage.html
+#Redirect 301 /blog/ http://www.laprensa.com.ni
+
+#added by shawn to try and correct movil boletin redirect issues
+RewriteCond %{QUERY_STRING}    ^ref=bol$
+RewriteRule (.*) /$1? [R=301]
+
+# Redirect mobile rule
+#RewriteCond %{HTTP_USER_AGENT} ^.*Android.*$
+#RewriteRule ^(.*)$ http://m.laprensa.com.ni [R=301]
+
+#RewriteCond ${HTTP_USER_AGENT} iPhone
+#RewriteRule .* http://m.laprensa.com.ni
+
+#RewriteCond %{HTTP_USER_AGENT} ^.*BlackBerry.*$
+#RewriteRule ^(.*)$ http://m.laprensa.com.ni [R=301]
+
+# End
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})$ /$1/$2/$3/ [R=301,L]
+RewriteRule ^portada/?$ /index.php [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/$ /index.php?year=$1&month=$2&day=$3 [QSA,L]
+# Suplementos
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/suplemento/(.+)/(.+)$ /suplementos.php?year=$1&month=$2&day=$3&uri=$4&idarticulo=$5 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/suplemento/(.+)/$ /suplementos.php?year=$1&month=$2&day=$3&uri=$4 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/suplemento/(.+)$ /suplementos.php?year=$1&month=$2&day=$3&uri=$4 [QSA,L]
+# Tags
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/claves/(.+)$ /claves.php?year=$1&month=$2&day=$3&clave=$4 [QSA,L]
+# Opciones de las noticias
+#RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)/imprimir$ /imprimir.php?idnoticia=$5&uri=$4 [QSA,L]
+#RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)/enviar$ /enviar.php?idnoticia=$5 [QSA,L]
+#RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)/notificar$ /notificar.php?year=$1&month=$2&day=$3&uri=$4&idnoticia=$5 [QSA,L]
+#RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/suplemento/(.+)/(.+)$ /suplementos.php?year=$1&month=$2&day=$3&uri=$4&idarticulo=$5 [QSA,L]
+#RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/suplemento/(.+)/$ /suplementos.php?year=$1&month=$2&day=$3&uri=$4 [QSA,L]
+#RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/suplemento/(.+)$ /suplementos.php?year=$1&month=$2&day=$3&uri=$4 [QSA,L]
+
+RewriteRule ^suplementocomercial/bookSettings.js/([0-9]+)$ /suplementocomercial/bookSettings.js.php?suplementocomercial=$1 [QSA,L]
+RewriteRule ^suplementocomercial/bookSettings.js.php/([0-9]+)$ /suplementocomercial/bookSettings.js.php?suplementocomercial=$1 [QSA,L]
+RewriteRule ^suplementocomercial/bookSettingsS3_([0-9]+).js /suplementocomercial/bookSettingsS3.php?suplementocomercial=$1 [QSA,L]
+RewriteRule ^suplementocomercial/bookSettingsS3_([0-9]+).js.php /suplementocomercial/bookSettingsS3.php?suplementocomercial=$1 [QSA,L]
+RewriteRule ^suplementocomercial/([0-9]+)/?$ /suplementocomercial/edicion.php?suplementocomercial=$1 [QSA,L]
+
+# Allows SEO friendly URLs
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)([a-z0-9\-]*)$ /noticia.php?year=$1&month=$2&day=$3&uri=$4&idnoticia=$5 [QSA,L]
+#RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)$ /noticia.php?year=$1&month=$2&day=$3&uri=$4&idnoticia=$5 [QSA,L]
+
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/departamentales/(.+)$ /noticia_departamentos.php?year=$1&month=$2&day=$3&uri=departamentales/$4 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/departamentales/$ /noticia_departamentos.php?year=$1&month=$2&day=$3&uri=departamentales [QSA,L]
+
+#RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/([0-9]+)$ /noticia.php?year=$1&month=$2&day=$3&uri=$4&idnoticia=$5 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)/$ /noticia.php?year=$1&month=$2&day=$3&uri=$4 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/([0-9]{2})/(.+)$ /noticia.php?year=$1&month=$2&day=$3&uri=$4 [QSA,L]
+# Seccion departamentos
+
+RewriteRule ^rss/?$ /feed.php [QSA,L]
+RewriteRule ^rss/(.+)$ /feed.php?uri=$1 [QSA,L]
+# Borrar despues, cuando solo este en tau, todo, sirve para mantener soporte con las noticias de octubre
+RewriteRule ^archivo/(.*)$  http://archivo.laprensa.com.ni/archivo/$1 [R=301,L]
+RewriteRule ^google/(.*)$  http://archivo.laprensa.com.ni/google/$1 [R=301,L]
+RewriteRule ^cronologico/(.*)$  http://archivo.laprensa.com.ni/cronologico/$1 [R=301,L]
+RewriteRule ^clicks/(.*)$  http://archivo.laprensa.com.ni/clicks/$1 [R=301,L]
+RewriteRule ^prensa_doc/(.*)$  http://archivo.laprensa.com.ni/prensa_doc/$1 [R=301,L]
+RewriteRule ^openx/(.*)$  http://archivo.laprensa.com.ni/openx/$1 [R=301,L]
+RewriteRule ^\_ads/(.*)$  http://archivo.laprensa.com.ni/_ads/$1 [R=301,L]
+RewriteRule ^movil$ /movil/ [R=301,L]
+#commented by dave sep6
+#RewriteRule ^iphone$  http://bit.ly/qI1VAG [R=301,L]
+RewriteRule ^ipad$  http://bit.ly/pGdzka [R=301,L]
+#
+RewriteRule ^entrar$ /access.php?opt=auth [QSA,L]
+RewriteRule ^lostpasswd$ /access.php?opt=remind_passwd [QSA,L]
+RewriteRule ^registrarse$ /access.php?opt=viewform [QSA,L]
+RewriteRule ^suscribirse$ /suscripcionimpreso.php [QSA,L]
+RewriteRule ^graph_(.+).png$ /charts/graph_$1.png [R=301,L]
+#RewriteRule ^graph_(.+).png$ /graph.php?idproducto=$1 [QSA,L]
+RewriteRule ^especial/(.+)/(.+)$ /especiales.php?uri=$1&idnota=$2 [QSA,L]
+RewriteRule ^especial/(.+)/?$ /especiales.php?uri=$1 [QSA,L]
+RewriteRule ^infografia/(.+)$ /info.php?idinfografia=$1 [QSA,L]
+
+#para candidatos en elecciones
+RewriteRule ^candidatos/(.+)$ /candidato.php?idppolitico=$1 [QSA,L]
+RewriteRule ^candidatos/?$ /candidato.php [QSA,L]
+
+# Agregados para el mini-sitio Mi Noticia
+RewriteRule ^minoticia/?$ /minoticia.php [QSA,L]
+RewriteRule ^minoticia/busqueda?$ /busquedamn.php [QSA,L]
+RewriteRule ^minoticia/enviarnoticia/?$ /envionoticia.php [QSA,L]
+RewriteRule ^minoticia/enviarfoto/?$ /enviofoto.php [QSA,L]
+RewriteRule ^minoticia/enviaraudio/?$ /envioaudio.php [QSA,L]
+RewriteRule ^minoticia/enviarvideo/?$ /enviovideo.php [QSA,L]
+RewriteRule ^minoticia/entrar$ /accessminoticia.php?opt=auth [QSA,L]
+RewriteRule ^minoticia/lostpasswd$ /accessminoticia.php?opt=remind_passwd [QSA,L]
+RewriteRule ^minoticia/registrarse$ /accessminoticia.php?opt=viewform [QSA,L]
+RewriteRule ^minoticia/logout/?$ /logoutminoticia.php [QSA,L]
+RewriteRule ^minoticia/galeria/([0-9]+)$ /galeriafoto-mn.php?idgaleriaminoticia=$1 [QSA,L]
+RewriteRule ^minoticia/videos/([0-9]+)$ /video.php?idvideominoticia=$1 [QSA,L]
+# Seccion de noticias
+RewriteRule ^minoticia/([0-9]+)/imprimir$ /imprimirmn.php?idminoticia=$1 [QSA,L]
+RewriteRule ^minoticia/([0-9]+)/enviar$ /enviarmn.php?idminoticia=$1 [QSA,L]
+RewriteRule ^minoticia/([0-9]+)/notificar$ /notificarmn.php?idminoticia=$1 [QSA,L]
+RewriteRule ^minoticia/([0-9]+)$ /noticiamn.php?idminoticia=$1 [QSA,L]
+RewriteRule ^minoticia/ojociudadano/([0-9]+)$ /ojociudadano.php?idojociudadano=$1 [QSA,L]
+
+# Domingo
+RewriteRule ^domingo/([0-9]{8})/?$ /domingo/edicion.php?iddomingo=$1 [QSA,L]
+RewriteRule ^domingo/([0-9]{8})/bookSettings.js$ /domingo/bookSettings.js.php?iddomingo=$1 [QSA,L]
+# Magazine---datos originales
+#RewriteRule ^magazine/([0-9]{4})([0-9]{2})([0-9]{2})/?$ /magazine/edicion.php?magazine=$1-$2-$3 [QSA,L]
+RewriteRule ^portadamagazine/?$ /magazine/magazine_select.php [QSA,L]
+RewriteRule ^magazine/?$ /magazine/animada/index.php [QSA,L]
+RewriteRule ^magazine/animada/([0-9]{4})([0-9]{2})([0-9]{2})/?$ /magazine/animada/edicion.php?magazine=$1-$2-$3 [QSA,L]
+RewriteRule ^magazine/animada/([0-9]{4})([0-9]{2})([0-9]{2})/bookSettings.js$ /magazine/animada/bookSettings.js.php?magazine=$1-$2-$3 [QSA,L]
+
+# Magazine
+RewriteRule ^entrar/magazine$ /entrar?refer=magazine [QSA,L]
+# FIXME: ya no existe login_mazine
+RewriteRule ^magazine/animada/entrar$ /login_magazine.php?opt=auth [QSA,L]
+#RewriteRule ^magazine/animada/lostpasswd$ /login_magazine.php?opt=remind_passwd [QSA,L]
+RewriteRule ^magazine/animada/registrarse$ /login_magazine.php?opt=viewform [QSA,L]
+#RewriteRule ^magazine/animada/logout/?$ /logout.php [QSA,L]
+
+# suplemento comercial
+#RewriteRule ^suplementocomercial/bookSettings.js/([0-9]+)$ /suplementocomercial/bookSettings.js.php?suplementocomercial=$1 [QSA,L]
+#RewriteRule ^suplementocomercial/bookSettings.js.php/([0-9]+)$ /suplementocomercial/bookSettings.js.php?suplementocomercial=$1 [QSA,L]
+#RewriteRule ^suplementocomercial/([0-9])/?$ /suplementocomercial/edicion.php?suplementocomercial=$1 [QSA,L]
+#RewriteRule ^suplementocomerciales/bookSettings.js/([0-9]+)$ /suplementocomercial/bookSettings.js.php?suplementocomercial=$1 [QSA,L]
+RewriteRule ^suplementocomercial/bookSettings.js/([0-9]+)$ /suplementocomercial/bookSettings.js.php?suplementocomercial=$1 [QSA,L]
+RewriteRule ^suplementocomercial/bookSettings.js.php/([0-9]+)$ /suplementocomercial/bookSettings.js.php?suplementocomercial=$1 [QSA,L]
+RewriteRule ^suplementocomercial/([0-9]+)/?$ /suplementocomercial/edicion.php?suplementocomercial=$1 [QSA,L]
+
+
+
+#Olimpiadas 2012
+RewriteRule ^olimpiadas-2012/noticias/(.+)$ /olimpiadas-2012/noticia.php?idnoticia=$1 [QSA,L]
+RewriteRule ^olimpiadas-2012/noticias$ /olimpiadas-2012/noticia.php [QSA,L]
+RewriteRule ^olimpiadas-2012/perfiles/(.+)$ /olimpiadas-2012/perfil.php?idperfil_olimpiada=$1 [QSA,L]
+RewriteRule ^olimpiadas-2012/perfiles$ /olimpiadas-2012/perfil.php [QSA,L]
+
+RewriteRule ^lpclubpromo$ /lpclub.php?opt=viewform [QSA,L]
+
+# pic aventuras
+RewriteRule ^pic-aventura$ /pic-aventuras/home.php [QSA,L]
+RewriteRule ^pic-aventura/foto/([0-9]+)$ /pic-aventuras/pic.php?id=$1 [QSA,L]
+RewriteRule ^pic-aventura/reglamento$ /pic-aventuras/reglamento.php [QSA,L]
+RewriteRule ^pic-aventura/ganadoras/([a-z0-9A-Z\-]*)$ /pic-aventuras/galeria.php?semana=$1 [QSA,L]
+
+# Especial elecciones venezuela 2013
+#RewriteRule ^elecciones-venezuela-2013/perfil-candidato/([a-z0-9A-Z\-]*)$ /perfil-candidatos-venezuela-2013.php?idcandidato=$1 [QSA,L]
+#RewriteRule ^elecciones-venezuela-2013/$ /elecciones-venezuela-2013.php [QSA,L]
+#RewriteRule ^elecciones-venezuela-2013/galeria/$ /galeria-elecciones-venezuela-2013.php [QSA,L]
+#RewriteRule ^elecciones-venezuela-2013/videos/$ /videos-elecciones-venezuela-2013.php [QSA,L]
+#RewriteRule ^elecciones-venezuela-2013/venezuela/$ /venezuela.php [QSA,L]
+#RewriteRule ^elecciones-venezuela-2013/resultados/$ /resultados-venezuela-2013.php [QSA,L]
+#RewriteRule ^elecciones-venezuela-2013/([a-z0-9A-Z\-]*)/$ /nota-elecciones-venezuela-2013.php?idnoticia=$1 [QSA,L]
+
+#####RewriteRule ^magazine/animada/([0-9]{4})([0-9]{2})([0-9]{2})/?$ /magazine/animada/edicion.php?magazine=$1-$2-$3 [QSA,L]
+#####RewriteRule ^magazine/animada/([0-9]{4})([0-9]{2})([0-9]{2})/bookSettings.js$ /magazine/animada/bookSettings.js.php?magazine=$1-$2-$3 [QSA,L]
+
+# cocinando con la prensa
+
+#RewriteRule ^cocinando/?$ /cocinando.php [QSA,L]
+#RewriteRule ^cocinando/categoria/([0-9]+)/?$ /categoriacocinando.php?categoria=$1 [QSA,L]
+#RewriteRule ^cocinando/busqueda/(.+)/?$ /busquedacocinando.php?clipcocinando=$1 [QSA,L]
+
+# 404
+#
+# javier ha desabilitado todas las lineas siguientes, con un 404 estatico no hace falta todo esto
+#
+#RewriteRule ^cgi-bin$ /404.php?no-valid=true [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^([0-9]{4})/(.+)$ /404.php?no-valid=true [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^www/(.+)$ /404.php [L]
+
+# Adds .php to URI (as long as URI does not exist and URI.php does) - javier
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule (.+) /$1.php?uri=$1 [L]
+
+# Paginas - desabilitado por javier. deprecated by "Real 404"
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule (.+) /pagina.php?uri=$1 [L]
+
+# Real 404 - javier
+ErrorDocument 404 /404.html
+
+# deny a algunos ips
+order deny,allow
+deny from 71.108.140.148
+allow from all
+
+# default session values
+php_value session.cookie_domain "www.laprensa.com.ni"
+php_value session.name "LPPHPSESSID"

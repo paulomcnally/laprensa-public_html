@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<META HTTP-EQUIV="Refresh" CONTENT="5;URL=http://www.laprensa.com.ni/portada">
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-1199834677431615");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-1199834677431615", "LA_PRENSA_Interstitial");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+
+<title>Interstitial</title>
+</head>
+<body>
+<!-- LA_PRENSA_Interstitial -->
+<script type='text/javascript'>
+GA_googleFillSlot("LA_PRENSA_Interstitial");
+</script>
+
+</body>
+</html>

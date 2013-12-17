@@ -256,7 +256,15 @@ if(!$smarty->is_cached('portada_destacado.tpl',$cache_pattern)) {
       $rows[$i]['embed'] = $matches[0];
       $rows[$i]['embed'] = preg_replace('/width\=\"([0-9]+)\"/is','width="250"',$rows[$i]['embed']);
       $rows[$i]['embed'] = preg_replace('/height\=\"([0-9]+)\"/is','height="180"',$rows[$i]['embed']);
+    } elseif(preg_match('/<iframe (.*)*><\/iframe>/is',$rows[$i]['texto'],$matches)) {
+      $rows[$i]['iframe'] = $matches[0];
+      $rows[$i]['iframe'] = preg_replace('/width\=\"([0-9]+)\"/is','width="250"',$rows[$i]['iframe']);
+      $rows[$i]['iframe'] = preg_replace('/width\=([0-9]+)/is','width=250',$rows[$i]['iframe']);
+      $rows[$i]['iframe'] = preg_replace('/height\=\"([0-9]+)\"/is','height="141"',$rows[$i]['iframe']);
+      $rows[$i]['iframe'] = preg_replace('/height\=([0-9]+)/is','height=141',$rows[$i]['iframe']);
+      $rows[$i]['iframe'] = preg_replace('/>/',' frameborder="0" scrolling="no">',$rows[$i]['iframe']);
     }
+
     $rows[$i]['stars'] = $noticia->getVar("SELECT round((((raiting_1+(raiting_2*2)+(raiting_3*3)+(raiting_4*4)+(raiting_5*5))::float)/(raiting_1+raiting_2+raiting_3+raiting_4+raiting_5))::numeric,1) AS resultado FROM noticia WHERE idnoticia=".$rows[$i]["idnoticia"]." AND (raiting_1<>0 OR raiting_2<>0 OR raiting_3<>0 OR raiting_4<>0 OR raiting_5<>0);");
   }
   $smarty->assign('videos',$rows);

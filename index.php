@@ -269,6 +269,41 @@ if(!$smarty->is_cached('portada_destacado.tpl',$cache_pattern)) {
   }
   $smarty->assign('videos',$rows);
   unset($rows);
+  /*
+   * Bloque de especiales de LP TV
+   *
+   * */
+  $noticia->order = 'creacion DESC';
+  $noticia->limit = 5;
+  $vidspecials = $noticia->readDataFilter("noticia.idedicion IN (SELECT idedicion FROM edicion WHERE edicion >= '".$idedicion . "') AND noticia.idseccion = 19 AND noticia.estado = 'A'");
+  for($i=0;$i<count($vidspecials);$i++) {
+      if(preg_match('/youtube\.com\/v\/([\w\-]+)/', $vidspecials[$i]['texto'], $matches)) {
+          $vidspecials[$i]['preview'] = $matches[1];
+      } elseif(preg_match('/' . str_replace('/',"\/",CLIPSURL) . '\/(.*)\'/', $vidspecials[$i]['texto'], $matches)) {
+          $vidspecials[$i]['flowplayer'] = true;
+          $vidspecials[$i]['preview'] = $matches[1];
+      } elseif(preg_match('/' . preg_quote(CLIPSURL,'/') . '\/(.*)\)(.*)?href=\"' . preg_quote(CLIPSURL,'/') . '\/(.*)\"\>/', $vidspecials[$i]['texto'], $matches)) {
+          $vidspecials[$i]['flowplayer'] = true;
+          $vidspecials[$i]['preview'] = $matches[1];
+          $vidspecials[$i]['clip'] = $matches[3];
+          $vidspecials[$i]['cdn'] = $noticia->getVar("SELECT cdn FROM video WHERE archivo = '" . $noticia->database->escape($matches[3]) . "'");
+      } elseif(preg_match('/<object(.*)?>(.*)?<\/object>/is',$vidspecials[$i]['texto'],$matches)) {
+          $vidspecials[$i]['embed'] = $matches[0];
+          $vidspecials[$i]['embed'] = preg_replace('/width\=\"([0-9]+)\"/is','width="250"',$vidspecials[$i]['embed']);
+          $vidspecials[$i]['embed'] = preg_replace('/height\=\"([0-9]+)\"/is','height="180"',$vidspecials[$i]['embed']);
+      } elseif(preg_match('/<iframe (.*)*><\/iframe>/is',$vidspecials[$i]['texto'],$matches)) {
+          $vidspecials[$i]['iframe'] = $matches[0];
+          $vidspecials[$i]['iframe'] = preg_replace('/width\=\"([0-9]+)\"/is','width="250"',$vidspecials[$i]['iframe']);
+          $vidspecials[$i]['iframe'] = preg_replace('/width\=([0-9]+)/is','width=250',$vidspecials[$i]['iframe']);
+          $vidspecials[$i]['iframe'] = preg_replace('/height\=\"([0-9]+)\"/is','height="141"',$vidspecials[$i]['iframe']);
+          $vidspecials[$i]['iframe'] = preg_replace('/height\=([0-9]+)/is','height=141',$vidspecials[$i]['iframe']);
+          $vidspecials[$i]['iframe'] = preg_replace('/>/',' frameborder="0" scrolling="no">',$vidspecials[$i]['iframe']);
+      }
+
+      $vidspecials[$i]['stars`'] = $noticia->getVar("SELECT round((((raiting_1+(raiting_2*2)+(raiting_3*3)+(raiting_4*4)+(raiting_5*5))::float)/(raiting_1+raiting_2+raiting_3+raiting_4+raiting_5))::numeric,1) AS resultado FROM noticia WHERE idnoticia=".$vidspecials[$i]["idnoticia"]." AND (raiting_1<>0 OR raiting_2<>0 OR raiting_3<>0 OR raiting_4<>0 OR raiting_5<>0);");
+  }
+  $smarty->assign('videos',$rows);
+  $smarty->assign('vidspecials',$vidspecials);
   
   # Noticias Electorales  
   # $notielectoral = new noticiaTable();

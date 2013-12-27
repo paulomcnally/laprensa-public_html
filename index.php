@@ -302,8 +302,8 @@ if(!$smarty->is_cached('portada_destacado.tpl',$cache_pattern)) {
 
       $vidspecials[$i]['stars`'] = $noticia->getVar("SELECT round((((raiting_1+(raiting_2*2)+(raiting_3*3)+(raiting_4*4)+(raiting_5*5))::float)/(raiting_1+raiting_2+raiting_3+raiting_4+raiting_5))::numeric,1) AS resultado FROM noticia WHERE idnoticia=".$vidspecials[$i]["idnoticia"]." AND (raiting_1<>0 OR raiting_2<>0 OR raiting_3<>0 OR raiting_4<>0 OR raiting_5<>0);");
   }
-  $smarty->assign('videos',$rows);
   $smarty->assign('vidspecials',$vidspecials);
+  unset($vidspecials);
   
   # Noticias Electorales  
   # $notielectoral = new noticiaTable();

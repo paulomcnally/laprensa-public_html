@@ -276,7 +276,7 @@ if(!$smarty->is_cached('portada_destacado.tpl',$cache_pattern)) {
   $noticia->order = 'creacion DESC';
   $noticia->limit = 5;
   $vidspecials = $noticia->readDataFilter("noticia.idnoticia IN (SELECT idnoticia FROM noticia, edicion WHERE edicion = '".$idedicion . "' and noticia.creacion::date >= edicion.edicion AND noticia.idseccion = 19 AND noticia.estado = 'A')");
-  for($i=0;$i<count($vidspecials);$i++) {
+  for($i=0; $i<count($vidspecials); $i++) {
       if(preg_match('/youtube\.com\/v\/([\w\-]+)/', $vidspecials[$i]['texto'], $matches)) {
           $vidspecials[$i]['preview'] = $matches[1];
       } elseif(preg_match('/' . str_replace('/',"\/",CLIPSURL) . '\/(.*)\'/', $vidspecials[$i]['texto'], $matches)) {
@@ -300,7 +300,6 @@ if(!$smarty->is_cached('portada_destacado.tpl',$cache_pattern)) {
           $vidspecials[$i]['iframe'] = preg_replace('/>/',' frameborder="0" scrolling="no">',$vidspecials[$i]['iframe']);
       }
 
-      $vidspecials[$i]['stars`'] = $noticia->getVar("SELECT round((((raiting_1+(raiting_2*2)+(raiting_3*3)+(raiting_4*4)+(raiting_5*5))::float)/(raiting_1+raiting_2+raiting_3+raiting_4+raiting_5))::numeric,1) AS resultado FROM noticia WHERE idnoticia=".$vidspecials[$i]["idnoticia"]." AND (raiting_1<>0 OR raiting_2<>0 OR raiting_3<>0 OR raiting_4<>0 OR raiting_5<>0);");
   }
   $smarty->assign('vidspecials',$vidspecials);
   unset($vidspecials);

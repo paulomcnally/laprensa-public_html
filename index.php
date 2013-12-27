@@ -275,7 +275,7 @@ if(!$smarty->is_cached('portada_destacado.tpl',$cache_pattern)) {
    * */
   $noticia->order = 'creacion DESC';
   $noticia->limit = 5;
-  $vidspecials = $noticia->readDataFilter("noticia.idedicion IN (SELECT idedicion FROM edicion WHERE edicion >= '".$idedicion . "') AND noticia.idseccion = 19 AND noticia.estado = 'A'");
+  $vidspecials = $noticia->readDataFilter("noticia.idnoticia IN (SELECT idnoticia FROM noticia, edicion WHERE edicion >= '".$idedicion . "' and noticia.creacion >= edicion.edicion AND noticia.idseccion = 19 AND noticia.estado = 'A')");
   for($i=0;$i<count($vidspecials);$i++) {
       if(preg_match('/youtube\.com\/v\/([\w\-]+)/', $vidspecials[$i]['texto'], $matches)) {
           $vidspecials[$i]['preview'] = $matches[1];

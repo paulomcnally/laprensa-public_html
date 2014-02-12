@@ -1,6 +1,6 @@
 <?php
-session_start();
 require('/var/www/html/laprensa/classes/app.class.php');
+session_start();
 include_once '/var/www/html/laprensa/public_html/securimage/securimage.php';
 $securimage = new Securimage();
 $encuesta = new encuestapicTable();
@@ -22,4 +22,3 @@ if (empty($_POST['captcha_code'])) {
     unset($foto);
 }
 ?>
-

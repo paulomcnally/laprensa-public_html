@@ -148,10 +148,17 @@ RewriteRule ^olimpiadas-2012/perfiles$ /olimpiadas-2012/perfil.php [QSA,L]
 RewriteRule ^lpclubpromo$ /lpclub.php?opt=viewform [QSA,L]
 
 # pic aventuras
-RewriteRule ^pic-aventura$ /pic-aventuras/home.php [QSA,L]
-RewriteRule ^pic-aventura/foto/([0-9]+)$ /pic-aventuras/pic.php?id=$1 [QSA,L]
-RewriteRule ^pic-aventura/reglamento$ /pic-aventuras/reglamento.php [QSA,L]
-RewriteRule ^pic-aventura/ganadoras/([a-z0-9A-Z\-]*)$ /pic-aventuras/galeria.php?semana=$1 [QSA,L]
+#RewriteRule ^pic-aventura$ /pic-aventuras/home.php [QSA,L]
+#RewriteRule ^pic-aventura/foto/([0-9]+)$ /pic-aventuras/pic.php?id=$1 [QSA,L]
+#RewriteRule ^pic-aventura/reglamento$ /pic-aventuras/reglamento.php [QSA,L]
+#RewriteRule ^pic-aventura/ganadoras/([a-z0-9A-Z\-]*)$ /pic-aventuras/galeria.php?semana=$1 [QSA,L]
+
+# jc - photoalbum
+RewriteRule ^pic-aventura$ /photoalbum/index.php [QSA,L]
+RewriteRule ^pic-aventura/foto/([0-9]+)$ /photoalbum/pic.php?id=$1 [QSA,L]
+RewriteRule ^pic-aventura/reglamento$ /photoalbum/reglamento.php [QSA,L]
+RewriteRule ^pic-aventura/ganadoras/([a-z0-9A-Z\-]*)$ /photoalbum/galeria.php?semana=$1 [QSA,L]
+RewriteRule ^pic-aventura/(.*)$ /photoalbum/$1 [QSA,L]
 
 # Especial elecciones venezuela 2013
 #RewriteRule ^elecciones-venezuela-2013/perfil-candidato/([a-z0-9A-Z\-]*)$ /perfil-candidatos-venezuela-2013.php?idcandidato=$1 [QSA,L]

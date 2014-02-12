@@ -38,6 +38,11 @@ have a fixed width and height (but it's not required).
     margin: 20px 22px;
 }
 
+#sponsors .jcarousel li {
+    /* Required only for block elements like <li>'s */
+    float: left;
+    margin: 15px 120px;
+}
 /*
 * Custom Styles
 */

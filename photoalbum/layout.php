@@ -10,15 +10,15 @@ $tpl = 'photoalbum/base.html';
 $site= array(
     "title"=>"PicAventura",
     "path"=>"/pic-aventura",
-    "description"=>"PicAventura - Se trata de una dinámica que premiará la creatividad. Lo que tenés que hacer es subir en cualquiera de las cuentas las mejores “pics” de tus salidas, ¡ojo! que no necesariamente tengan buena resolución, pero que sí hayan hecho uso de la creatividad.",
-    "keywords"=>"PicAventura, Concurso, La Prensa, Claro, pics, creatividad, salidas",
-    "owner"=> array("name"=>"Aqui entre Nos","path"=>""),
-    "owner"=> array("name"=>"Claro","path"=>""),
-    "owner"=> array("name"=>"LaPrensa","path"=>"/"),
+    "meta"=> array("description"=>"PicAventura - Se trata de una dinámica que premiará la creatividad. Lo que tenés que hacer es subir en cualquiera de las cuentas las mejores “pics” de tus salidas, ¡ojo! que no necesariamente tengan buena resolución, pero que sí hayan hecho uso de la creatividad.",
+    "keywords"=>"PicAventura, Concurso, La Prensa, Claro, pics, creatividad, salidas"),
+    "owner1"=> array("name"=>"Aqui entre Nos","path"=>"http://es-es.facebook.com/AENelsuple"),
+    "owner2"=> array("name"=>"Claro","path"=>"http://www.claro.com.ni/"),
+    "owner3"=> array("name"=>"LaPrensa","path"=>"/"),
     "socialnetwork"=>array(
         "fb"=>"http://www.facebook.com/laprensanicaragua",
-        "tw"=>"http://twitter.com/aentrenos",
-        "ig"=>"http://instagram.com/aensuple"),
+        "tw"=>"http://www.twitter.com/aentrenos",
+        "ig"=>"http://www.instagram.com/aensuple"),
     "meta1"=>"",
     "meta2"=>""
 );

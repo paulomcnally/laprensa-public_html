@@ -72,6 +72,7 @@ body {
 -----------------------------------------------------------------------------*/
  .middle {
     width: 100%;
+    min-height: 400px;
     position: relative;
     padding-bottom: 35px;
     background-color: #ffffff;

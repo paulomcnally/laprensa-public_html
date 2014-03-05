@@ -1,0 +1,18 @@
+<?php
+  $banner_superior = "<script type='text/javascript'><!--// <![CDATA[
+    /* [id448] Banner Superior 468 - 60*/
+    OA_show(448);
+// ]]> --></script><noscript><a target='_blank' href='http://www.servidordeanuncios.com/www/delivery/ck.php?n=a3f02152'><img border='0' alt='' src='http://www.servidordeanuncios.com/www/delivery/avw.php?zoneid=448&amp;n=a3f02152' /></a></noscript>";
+  $banner_derecho_160_200 = "<script type='text/javascript'><!--// <![CDATA[
+    /* [id449] Banner Superior 160 - 600*/
+    OA_show(449);
+// ]]> --></script><noscript><a target='_blank' href='http://www.servidordeanuncios.com/www/delivery/ck.php?n=a96c515e'><img border='0' alt='' src='http://www.servidordeanuncios.com/www/delivery/avw.php?zoneid=449&amp;n=a96c515e' /></a></noscript>";
+  $banner_centro_300_250 = "<script type='text/javascript'><!--// <![CDATA[
+    /* [id451] Banner Superior 300 - 250*/
+    OA_show(451);
+// ]]> --></script><noscript><a target='_blank' href='http://www.servidordeanuncios.com/www/delivery/ck.php?n=a25885e0'><img border='0' alt='' src='http://www.servidordeanuncios.com/www/delivery/avw.php?zoneid=451&amp;n=a25885e0' /></a></noscript>";
+  $smarty->assign('adserver_header',"<script type='text/javascript' src='http://www.servidordeanuncios.com/www/delivery/spcjs.php?id=60'></script>");
+  $smarty->assign('banner_superior', $banner_superior); 
+  $smarty->assign('banner_derecho_160_200', $banner_derecho_160_200); 
+  $smarty->assign('banner_centro_300_250', $banner_centro_300_250); 
+?>

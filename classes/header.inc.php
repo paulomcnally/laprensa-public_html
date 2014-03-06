@@ -132,8 +132,8 @@ if(!$smarty->is_cached('header.tpl',$cache_pattern_header)) {
   }
   $smarty->assign('title',$title);
   # Ads
+  @include_once(ROOTDIR.'/zonas/all.php');
   if(ZONA_SUPLEMENTO===true) {
-	 @include_once(ROOTDIR.'/zonas/all.php');
 	 @include_once(ROOTDIR.'/zonas/suplemento.php');
 	 $smarty->assign('uri', 'magazine');
 	}

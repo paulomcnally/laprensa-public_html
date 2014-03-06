@@ -1,0 +1,77 @@
+<?php
+# Funciones que definen el comportamiento de PHP
+setlocale(LC_TIME, "es_ES");
+ 
+# Constantes de conexion la base de datos
+if (ADMIN) define ('DSN', 'pgsql://laprensa:Blade-mobile8Occupy@pgsql.doap.internal/laprensa');
+else define ('DSN', 'pgsql://lpwww:Czech8surf7lofty@pgsql.doap.internal/laprensa');
+
+//if (ADMIN) define ('DSN', 'pgsql://shawn:fr1ck0ff@pgsql.doap.internal/laprensa');
+//if (ADMIN) define ('DSN', 'pgsql://laprensa:Blade-mobile8Occupy@pgsql.doap.internal/laprensa');
+//else define ('DSN', 'pgsql://shawn:fr1ck0ff@pgsql.doap.internal/laprensa');
+define ('DEBUG', false);
+define ('CACHE_DEBUG', false);
+
+define ('ALLOW_FROM_SITES','');
+define ('DSNMINOTICIA', 'pgsql://django_laprensa:fr1ck0ff@pgsql.doap.internal/django_laprensa');
+
+ 
+# Constantes del web y filesystem
+$configdir = dirname(__FILE__);
+$rootdir = substr($configdir, 0, strrpos($configdir,'/'));
+#define ('DOMAIN', 'laprensa.com.ni');
+define ('DOMAIN', 'laprensa.com.ni');
+define ('ROOTDIR', $rootdir);
+if (ADMIN === true)
+  define ('SQLLOG', ROOTDIR . '/logs/admin_sql.log');
+else
+  define ('SQLLOG', ROOTDIR . '/logs/sql.log');
+define ('LOGFILE', ROOTDIR . '/logs/cms.log');
+define ('HOMEDIR', ROOTDIR .'/public_html');
+define ('URL', 'http://www.' . DOMAIN);
+define ('MOVILURL', 'http://m.' . DOMAIN);
+define ('EMAIL', 'info@' . DOMAIN);
+# Directorio donde se almacenan los thumbs que se crearan
+define ('PIXDIR', ROOTDIR . '/imgs');
+define ('PIXURL', 'http://du89eogdt5czf.cloudfront.net/wp-content/uploads/sites/55');
+#define ('PIXURL', 'http://imgslp.'.DOMAIN);
+define ('PIXURL', 'http://imgs.'.DOMAIN);
+#define ('PIXURL', 'http://imgs.'.DOMAIN.':8081');
+define ('STATIC_URL', 'http://s3.'.DOMAIN);
+define ('FILESURL', URL . '/files');
+define ('DB3',true);
+
+define ('LPD_TITLE','La Prensa Domingo');
+define ('LPD_DOWN_DIR',ROOTDIR . '/enlaces/domingo');
+define ('LPM_TITLE','La Prensa Magazine');
+define ('LPM_DOWN_DIR',ROOTDIR . '/enlaces/magazine');
+
+# Stats
+define ('SQL_TRANS', ROOTDIR . '/scripts/counter.sql');
+# JPGRAPH
+define ('JPGRAPH_CACHE',$_SERVER['DOCUMENT_ROOT'] . '/../cache/jpgraph/');
+#define ('JPGRAPH_CACHE',$_SERVER['DOCUMENT_ROOT'] . '/charts/');
+
+# Variables de la Administración
+define ('ADMIN_DOMAIN', 'admin.' . DOMAIN);
+define ('ADMIN_URL','http://' . ADMIN_DOMAIN . "/");
+define ('VIDEOURL', 'http://media.' . DOMAIN);
+define ('CLIPSURL', VIDEOURL . '/clips');
+define ('MEDIAURL', URL . '/files/media');
+define ('CLIPSMN', VIDEOURL . '/clipsminoticia');
+define ('MEDIAMN', URL . '/files/mediaminoticia');
+define ('ROWS_PG','5,10,15,30,50');
+# End Variables de la Administración
+# Borrar despues
+# define ('ALMIDONDIR',ROOTDIR . '/cms');
+define ('ALMIDONDIR','/var/www/cms');
+define ('SSL_URL', 'http://' . DOMAIN . '/admin');
+
+include 'vars.inc.php';
+if (!defined ('TITLE'))
+  define ('TITLE', 'LA PRENSA. El Diario de los Nicaragüenses. Nicaragua');
+if (!defined ('MOVIL_TITLE'))
+  define ('MOVIL_TITLE','La Prensa Móvil | Nicaragua');
+
+$cdn_url = 'http://lpmedia1.doap.us';
+define('CDN_URL',$cdn_url);

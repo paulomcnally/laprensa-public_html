@@ -4,19 +4,23 @@
 	"HTMLFileName":"index.html",
 	"pref__general__AutoKeyframePropertiesArmed":"true",
 	"symbol_stage":{
-		"element_${_Text17}":{
+		"element_${_Text5}":{
+			"timelineColor2":"0x168c84",
+			"animationEnabled":"false",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"},
+		"element_${_Text7Copy13}":{
 			"animationEnabled":"false"},
-		"dummyStageParentHeight":"1550px",
 		"element_${_TextCopy6}":{
 			"animationEnabled":"false"},
 		"element_${_Text15}":{
 			"animationEnabled":"false"},
 		"element_${_Rectangle3}":{
-			"animationEnabled":"false",
-			"invisible":"false"},
+			"invisible":"false",
+			"animationEnabled":"false"},
 		"element_${_RoundRect}":{
 			"animationEnabled":"false"},
-		"element_${_Text14}":{
+		"element_${_Text3Copy7}":{
 			"animationEnabled":"false"},
 		"element_${_doblechip}":{
 			"animationEnabled":"false"},
@@ -24,7 +28,7 @@
 			"animationEnabled":"false"},
 		"element_${_Text7Copy16}":{
 			"animationEnabled":"false"},
-		"element_${_RoundRect2}":{
+		"element_${_Text7Copy12}":{
 			"animationEnabled":"false"},
 		"element_${_Text7Copy14}":{
 			"animationEnabled":"false"},
@@ -32,16 +36,12 @@
 			"animationEnabled":"false"},
 		"element_${_Text3Copy6}":{
 			"animationEnabled":"false"},
-		"element_${_RoundRect3Copy2}":{
-			"animationEnabled":"false",
-			"invisible":"false"},
+		"element_${_TextCopy3}":{
+			"animationEnabled":"false"},
 		"element_${_TextCopy9}":{
 			"animationEnabled":"false"},
-		"element_${_icon5}":{
-			"timelineColor2":"0x81aa62",
-			"animationEnabled":"false",
-			"timelineColor3":"0x5b6c4d",
-			"timelineColor":"0x91c767"},
+		"element_${_Text7Copy15}":{
+			"animationEnabled":"false"},
 		"element_${_Text9Copy3}":{
 			"animationEnabled":"false"},
 		"element_${_RectangleCopy}":{
@@ -58,8 +58,8 @@
 			"timelineColor3":"0x70657c",
 			"timelineColor":"0xceaef4"},
 		"element_${_RectangleCopy6}":{
-			"animationEnabled":"false",
-			"invisible":"false"},
+			"invisible":"false",
+			"animationEnabled":"false"},
 		"element_${_Text9Copy}":{
 			"animationEnabled":"false"},
 		"element_${_Text12Copy5}":{
@@ -103,8 +103,8 @@
 		"element_${_icon2}":{
 			"animationEnabled":"false"},
 		"element_${_RoundRect3}":{
-			"animationEnabled":"false",
-			"invisible":"false"},
+			"invisible":"false",
+			"animationEnabled":"false"},
 		"element_${_RoundRect3Copy7}":{
 			"animationEnabled":"false"},
 		"element_${_Text11Copy}":{
@@ -115,79 +115,80 @@
 			"animationEnabled":"false"},
 		"element_${_Text7Copy18}":{
 			"animationEnabled":"false"},
+		"element_${_logoprensa}":{
+			"animationEnabled":"false"},
 		"element_${_Text11Copy5}":{
 			"animationEnabled":"false"},
-		"element_${_TextCopy5}":{
+		"element_${_icon4}":{
 			"animationEnabled":"false"},
-		"element_${_Text7Copy2}":{
+		"element_${_Text12}":{
+			"timelineColor2":"0x107faa",
+			"animationEnabled":"true",
+			"timelineColor3":"0x295a6d",
+			"timelineColor":"0x008dc8"},
+		"element_${_Text8Copy3}":{
 			"animationEnabled":"false"},
-		"element_${_Text7Copy12}":{
-			"animationEnabled":"false"},
-		"element_${_Text7Copy13}":{
-			"animationEnabled":"false"},
-		"element_${_Text3Copy7}":{
+		"element_${_RoundRect2}":{
 			"animationEnabled":"false"},
 		"dummyStageParentWidth":"988px",
-		"element_${_TextCopy3}":{
+		"element_${_TextCopy5}":{
 			"animationEnabled":"false"},
-		"element_${_Text5}":{
-			"timelineColor2":"0x168c84",
-			"animationEnabled":"false",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096"},
-		"element_${_Text7Copy15}":{
+		"defaultStageParentHeight":"1550px",
+		"element_${_Text3Copy9}":{
+			"animationEnabled":"false"},
+		"element_${_Text12Copy2}":{
 			"animationEnabled":"false"},
 		"element_${_RoundRect3Copy3}":{
-			"animationEnabled":"false",
-			"invisible":"false"},
+			"invisible":"false",
+			"animationEnabled":"false"},
 		"element_${_Text15Copy2}":{
 			"animationEnabled":"false"},
 		"element_${_Text8}":{
 			"animationEnabled":"false"},
-		"element_${_TextCopy4}":{
+		"element_${_RoundRect3Copy}":{
+			"invisible":"false",
 			"animationEnabled":"false"},
-		"element_${_Text3Copy9}":{
+		"element_${_Text15Copy}":{
 			"animationEnabled":"false"},
 		"element_${_Text12Copy}":{
-			"animationEnabled":"false"},
-		"element_${_Text7Copy17}":{
 			"animationEnabled":"false"},
 		"element_${_RoundRect3Copy4}":{
 			"animationEnabled":"false"},
 		"element_${_Rectangle2Copy2}":{
 			"animationEnabled":"false"},
+		"element_${_Text12Copy4}":{
+			"animationEnabled":"false"},
 		"element_${_Text3Copy8}":{
 			"animationEnabled":"false"},
 		"element_${_Text11Copy3}":{
+			"animationEnabled":"false"},
+		"element_${_Rectangle2Copy3}":{
+			"animationEnabled":"false"},
+		"element_${_camara2}":{
+			"timelineColor2":"0x4fa275",
+			"animationEnabled":"true",
+			"timelineColor3":"0x456a55",
+			"timelineColor":"0x50bd82"},
+		"element_${_TextCopy4}":{
 			"animationEnabled":"false"},
 		"element_${_Text4}":{
 			"timelineColor2":"0x1aa38f",
 			"animationEnabled":"true",
 			"timelineColor3":"0x2a6a61",
 			"timelineColor":"0x00bda4"},
-		"element_${_camara2}":{
-			"timelineColor2":"0x4fa275",
-			"animationEnabled":"true",
-			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82"},
-		"element_${_Rectangle2Copy3}":{
-			"animationEnabled":"false"},
-		"element_${_Text12Copy4}":{
-			"animationEnabled":"false"},
 		"element_${_Text6}":{
 			"animationEnabled":"false"},
 		"element_${_Text12Copy3}":{
 			"animationEnabled":"false"},
-		"element_${_Text15Copy}":{
+		"element_${_Text7Copy17}":{
 			"animationEnabled":"false"},
-		"element_${_RoundRect3Copy}":{
-			"animationEnabled":"false",
-			"invisible":"false"},
-		"element_${_Text12Copy2}":{
+		"element_${_Text17}":{
 			"animationEnabled":"false"},
+		"dummyStageParentHeight":"1550px",
 		"element_${_Text10}":{
 			"animationEnabled":"false"},
-		"defaultStageParentHeight":"1550px",
+		"element_${_Text14}":{
+			"animationEnabled":"false"},
 		"element_${_RectangleCopy5}":{
 			"animationEnabled":"false"},
 		"element_${_title}":{
@@ -195,27 +196,25 @@
 			"animationEnabled":"true",
 			"timelineColor3":"0x385063",
 			"timelineColor":"0x2f73ad"},
-		"element_${_Text8Copy3}":{
+		"element_${_RoundRect3Copy2}":{
+			"invisible":"false",
 			"animationEnabled":"false"},
-		"element_${_Text12}":{
-			"timelineColor2":"0x107faa",
-			"animationEnabled":"true",
-			"timelineColor3":"0x295a6d",
-			"timelineColor":"0x008dc8"},
-		"element_${_icon4}":{
+		"element_${_icon5}":{
+			"timelineColor2":"0x81aa62",
+			"animationEnabled":"false",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767"},
+		"element_${_Text7Copy2}":{
 			"animationEnabled":"false"}},
 	"TransitionIdCounter":"75",
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"80",
 	"pixelsPerMs":"0.2",
-	"PreloadAudio":"false",
+	"viewStartY":"0",
 	"aqui-Default Timeline_playhead_ms":"0",
 	"usedBOM":"false",
 	"nextElementColorIndex":"11",
 	"stage-Default Timeline_playhead_ms":"454",
-	"symbol_aqui":{
-		"element_${_Text10}":{
-			"animationEnabled":"false"}},
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -241,4 +240,7 @@
 \
    }}\
 }",
-	"viewStartY":"0"}
+	"symbol_aqui":{
+		"element_${_Text10}":{
+			"animationEnabled":"false"}},
+	"PreloadAudio":"false"}

@@ -109,12 +109,6 @@ var symbols = {
                 fill: ["rgba(0,0,0,0)",im+"logogallo.png",'0px','0px']
             },
             {
-                id: 'logoprensa',
-                type: 'image',
-                rect: ['782px', '1474px','191px','60px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"logoprensa.svg",'0px','0px']
-            },
-            {
                 id: 'Text13',
                 type: 'text',
                 rect: ['794px', '66px','auto','auto','auto', 'auto'],
@@ -180,7 +174,7 @@ var symbols = {
                 opacity: 0.36839978448276,
                 fill: ["rgba(108,42,42,1.00)"],
                 stroke: [0,"rgb(0, 0, 0)","none"],
-                transform: [[],['32'],[],['0.90436','-7.91219'],['56.213%','37.0599%']]
+                transform: [[],['32'],[],['0.90436','-7.91219']]
             },
             {
                 id: 'Rectangle2Copy',
@@ -189,7 +183,7 @@ var symbols = {
                 opacity: 0.36839978448276,
                 fill: ["rgba(108,42,42,1.00)"],
                 stroke: [0,"rgb(0, 0, 0)","none"],
-                transform: [[],['-43'],[],['0.90436','-7.91219'],['50%','0%']]
+                transform: [[],['-43'],[],['0.90436','-7.91219']]
             },
             {
                 id: 'RoundRect3Copy8',
@@ -315,7 +309,7 @@ var symbols = {
                 id: 'Text7Copy10',
                 type: 'text',
                 rect: ['34px', '681px','auto','auto','auto', 'auto'],
-                text: "+ 20 CUPONES",
+                text: "+ 28 CUPONES",
                 align: "left",
                 font: ['Arial Black, Gadget, sans-serif', 25, "rgba(5,61,248,1.00)", "100", "none", "normal"]
             },
@@ -323,7 +317,7 @@ var symbols = {
                 id: 'Text7Copy11',
                 type: 'text',
                 rect: ['732px', '1225px','auto','auto','auto', 'auto'],
-                text: "+ 20 CUPONES",
+                text: "+ 28 CUPONES",
                 align: "left",
                 font: ['Arial Black, Gadget, sans-serif', 25, "rgba(0,59,255,1.00)", "100", "none", "normal"]
             },
@@ -658,6 +652,12 @@ var symbols = {
                 text: "DESBLOQUEADOS <br>DE FÁBRICA",
                 align: "center",
                 font: ['Arial, Helvetica, sans-serif', 20, "rgba(0,0,0,1.00)", "100", "none", "normal"]
+            },
+            {
+                id: 'logohoy',
+                type: 'image',
+                rect: ['851px', '1453px','114px','75px','auto', 'auto'],
+                fill: ["rgba(0,0,0,0)",im+"logohoy.png",'0px','0px']
             }],
             symbolInstances: [
             {
@@ -671,42 +671,53 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_TextCopy9}": [
-                ["style", "top", '904px'],
-                ["transform", "scaleX", '1.40665'],
-                ["transform", "scaleY", '1.40665'],
-                ["style", "left", '781px']
+            "${_RoundRect3Copy13}": [
+                ["style", "top", '355px'],
+                ["transform", "scaleY", '1.57822'],
+                ["transform", "rotateZ", '0deg'],
+                ["transform", "scaleX", '1.92446'],
+                ["gradient", "background-image", [270,[['rgba(255,2,8,1.00)',0],['rgba(140,17,17,1.00)',100]]]],
+                ["style", "left", '72px'],
+                ["style", "clip", [0,137.9140625,64,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
             ],
             "${_Text3Copy}": [
                 ["style", "top", '364px'],
                 ["transform", "scaleY", '1.40665'],
+                ["style", "width", '78px'],
                 ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,220,0,1.00)'],
-                ["style", "font-size", '10px'],
                 ["style", "left", '196px'],
-                ["style", "width", '78px']
+                ["style", "font-size", '10px']
             ],
-            "${_Text7Copy14}": [
-                ["style", "top", '929px'],
-                ["transform", "scaleY", '1.40665'],
-                ["color", "color", 'rgba(255,233,0,1)'],
-                ["transform", "scaleX", '1.40665'],
-                ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
-                ["style", "left", '845px'],
-                ["style", "font-size", '15px']
+            "${_Text2}": [
+                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.58)'],
+                ["transform", "scaleX", '0.9896'],
+                ["style", "left", '292px'],
+                ["style", "font-size", '66px'],
+                ["style", "top", '110px'],
+                ["transform", "scaleY", '1.44581'],
+                ["style", "width", '440px'],
+                ["style", "font-family", 'Lucida Console, Monaco, monospace'],
+                ["subproperty", "filter.drop-shadow.offsetH", '1px'],
+                ["subproperty", "filter.drop-shadow.offsetV", '1px']
             ],
             "${_Text3Copy7}": [
                 ["style", "top", '1072px'],
                 ["transform", "scaleY", '1.40665'],
-                ["style", "font-size", '9px'],
+                ["style", "width", '58px'],
                 ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,255,255,1)'],
                 ["style", "left", '879px'],
-                ["style", "width", '58px']
+                ["style", "font-size", '9px']
             ],
-            "${_smarthphone2}": [
-                ["style", "top", '852px'],
-                ["style", "left", '496px']
+            "${_RoundRect3Copy8}": [
+                ["style", "top", '908px'],
+                ["transform", "scaleY", '1.57822'],
+                ["transform", "rotateZ", '-180deg'],
+                ["transform", "scaleX", '1.92446'],
+                ["gradient", "background-image", [270,[['rgba(255,2,8,1.00)',0],['rgba(140,17,17,1.00)',100]]]],
+                ["style", "left", '744px'],
+                ["style", "clip", [0,137.9140625,64,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
             ],
             "${_Text11Copy}": [
                 ["style", "top", '1384px'],
@@ -717,76 +728,65 @@ var symbols = {
                 ["style", "left", '676px'],
                 ["style", "top", '616px']
             ],
-            "${_Text4Copy}": [
-                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,1.00)'],
-                ["subproperty", "filter.drop-shadow.offsetH", '2px'],
-                ["subproperty", "filter.drop-shadow.offsetV", '2px'],
-                ["style", "top", '811px'],
-                ["style", "font-size", '28px'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '508px'],
-                ["style", "width", '205px']
+            "${_Text3Copy5}": [
+                ["style", "top", '641px'],
+                ["transform", "scaleY", '1.40665'],
+                ["style", "width", '78px'],
+                ["transform", "scaleX", '1.40665'],
+                ["color", "color", 'rgba(255,230,0,1.00)'],
+                ["style", "left", '215px'],
+                ["style", "font-size", '10px']
+            ],
+            "${_logohoy}": [
+                ["style", "left", '851px'],
+                ["style", "top", '1453px']
             ],
             "${_Text7Copy13}": [
                 ["style", "top", '953px'],
                 ["transform", "scaleY", '1.40665'],
-                ["color", "color", 'rgba(255,233,0,1)'],
                 ["transform", "scaleX", '1.40665'],
+                ["color", "color", 'rgba(255,233,0,1)'],
                 ["style", "font-family", 'Arial, Helvetica, sans-serif'],
                 ["style", "left", '841px'],
                 ["style", "font-size", '11px']
             ],
-            "${_smartphone1}": [
-                ["style", "left", '265px'],
-                ["style", "top", '302px']
+            "${_TextCopy8}": [
+                ["transform", "scaleX", '1.40665'],
+                ["style", "left", '717px'],
+                ["transform", "scaleY", '1.40665'],
+                ["style", "top", '1025px']
             ],
-            "${_Ellipse}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px'],
-                ["color", "background-color", 'rgba(24,57,202,0.65)']
+            "${_Text7Copy5}": [
+                ["style", "top", '515px'],
+                ["transform", "scaleY", '1.40665'],
+                ["color", "color", 'rgba(255,255,255,1)'],
+                ["transform", "scaleX", '1.40665'],
+                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
+                ["style", "left", '63px'],
+                ["style", "font-size", '12px']
             ],
             "${_TextCopy}": [
                 ["style", "top", '480px'],
+                ["transform", "scaleX", '1.40665'],
                 ["transform", "scaleY", '1.40665'],
-                ["style", "left", '72px'],
-                ["transform", "scaleX", '1.40665']
+                ["style", "left", '72px']
             ],
             "${_Text3Copy8}": [
                 ["style", "top", '916px'],
                 ["transform", "scaleY", '1.40665'],
-                ["style", "width", '78px'],
+                ["style", "font-size", '10px'],
                 ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,220,0,1)'],
                 ["style", "left", '873px'],
-                ["style", "font-size", '10px']
-            ],
-            "${_RectangleCopy2}": [
-                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.458824)'],
-                ["subproperty", "filter.hue-rotate", '0deg'],
-                ["gradient", "background-image", [180,[['rgba(191,191,191,1.00)',0],['rgba(255,255,255,1.00)',100]]]],
-                ["subproperty", "filter.drop-shadow.offsetV", '3px'],
-                ["subproperty", "filter.drop-shadow.blur", '2px'],
-                ["style", "top", '1372px'],
-                ["style", "height", '46px'],
-                ["style", "width", '295px'],
-                ["style", "left", '101px']
+                ["style", "width", '78px']
             ],
             "${_Text3Copy4}": [
                 ["style", "top", '620px'],
                 ["transform", "scaleY", '1.40665'],
                 ["transform", "scaleX", '1.40665'],
-                ["style", "font-size", '9px'],
+                ["style", "width", '78px'],
                 ["style", "left", '36px'],
-                ["style", "width", '78px']
-            ],
-            "${_RoundRect3Copy13}": [
-                ["style", "top", '355px'],
-                ["transform", "scaleY", '1.57822'],
-                ["transform", "rotateZ", '0deg'],
-                ["transform", "scaleX", '1.92446'],
-                ["gradient", "background-image", [270,[['rgba(255,2,8,1.00)',0],['rgba(140,17,17,1.00)',100]]]],
-                ["style", "left", '72px'],
-                ["style", "clip", [0,137.9140625,64,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
+                ["style", "font-size", '9px']
             ],
             "${_RoundRect3Copy9}": [
                 ["style", "top", '1022px'],
@@ -797,39 +797,15 @@ var symbols = {
                 ["style", "left", '744px'],
                 ["style", "clip", [0,137.9140625,64,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
             ],
-            "${_RoundRect3Copy11}": [
-                ["style", "top", '581px'],
-                ["transform", "scaleY", '1.57822'],
-                ["transform", "rotateZ", '0deg'],
-                ["transform", "scaleX", '1.92446'],
-                ["gradient", "background-image", [270,[['rgba(255,2,8,1.00)',0],['rgba(140,17,17,1.00)',100]]]],
-                ["style", "left", '72px'],
-                ["style", "clip", [0,137.9140625,64,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
-            ],
-            "${_delgado}": [
-                ["style", "top", '264px'],
-                ["transform", "scaleY", '0.8004'],
-                ["style", "left", '484px'],
-                ["transform", "scaleX", '0.59321']
-            ],
             "${_Text7Copy7}": [
                 ["style", "top", '619px'],
-                ["style", "width", '54px'],
+                ["style", "font-size", '15px'],
                 ["transform", "scaleY", '1.40665'],
-                ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,233,0,1)'],
+                ["transform", "scaleX", '1.40665'],
                 ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
                 ["style", "left", '115px'],
-                ["style", "font-size", '15px']
-            ],
-            "${_Rectangle2Copy3}": [
-                ["color", "background-color", 'rgba(108,42,42,1)'],
-                ["transform", "scaleY", '-7.91219'],
-                ["transform", "rotateZ", '25deg'],
-                ["transform", "scaleX", '0.90436'],
-                ["style", "opacity", '0.36839979887008667'],
-                ["style", "left", '714px'],
-                ["style", "top", '963px']
+                ["style", "width", '54px']
             ],
             "${_Text7Copy16}": [
                 ["style", "top", '609px'],
@@ -841,35 +817,11 @@ var symbols = {
             "${_Text7Copy3}": [
                 ["style", "top", '1169px'],
                 ["transform", "scaleY", '1.40665'],
-                ["color", "color", 'rgba(255,233,0,1)'],
                 ["transform", "scaleX", '1.40665'],
+                ["color", "color", 'rgba(255,233,0,1)'],
                 ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
                 ["style", "left", '894px'],
                 ["style", "font-size", '15px']
-            ],
-            "${_Rectangle2Copy2}": [
-                ["color", "background-color", 'rgba(108,42,42,1)'],
-                ["transform", "scaleY", '-7.91219'],
-                ["transform", "rotateZ", '-50deg'],
-                ["transform", "scaleX", '0.90436'],
-                ["style", "opacity", '0.36839979887008667'],
-                ["style", "left", '714px'],
-                ["style", "top", '963px']
-            ],
-            "${_TextCopy8}": [
-                ["style", "top", '1025px'],
-                ["transform", "scaleX", '1.40665'],
-                ["transform", "scaleY", '1.40665'],
-                ["style", "left", '717px']
-            ],
-            "${_Text7Copy12}": [
-                ["style", "top", '1051px'],
-                ["transform", "scaleY", '1.40665'],
-                ["color", "color", 'rgba(255,255,255,1)'],
-                ["transform", "scaleX", '1.40665'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '717px'],
-                ["style", "font-size", '12px']
             ],
             "${_Text11Copy2}": [
                 ["style", "top", '1292px'],
@@ -882,8 +834,8 @@ var symbols = {
             "${_Text7Copy2}": [
                 ["style", "top", '405px'],
                 ["transform", "scaleY", '1.40665'],
-                ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,233,0,1)'],
+                ["transform", "scaleX", '1.40665'],
                 ["style", "font-family", 'Arial, Helvetica, sans-serif'],
                 ["style", "left", '164px'],
                 ["style", "font-size", '11px']
@@ -895,35 +847,35 @@ var symbols = {
             "${_Text3Copy2}": [
                 ["style", "top", '506px'],
                 ["transform", "scaleY", '1.40665'],
+                ["style", "font-size", '9px'],
                 ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,255,255,1.00)'],
-                ["style", "width", '62px'],
                 ["style", "left", '171px'],
-                ["style", "font-size", '9px']
+                ["style", "width", '62px']
             ],
             "${_Rectangle2Copy}": [
                 ["color", "background-color", 'rgba(108,42,42,1)'],
-                ["style", "-webkit-transform-origin", [50,0], {valueTemplate:'@@0@@% @@1@@%'} ],
-                ["style", "-moz-transform-origin", [50,0],{valueTemplate:'@@0@@% @@1@@%'}],
-                ["style", "-ms-transform-origin", [50,0],{valueTemplate:'@@0@@% @@1@@%'}],
-                ["style", "msTransformOrigin", [50,0],{valueTemplate:'@@0@@% @@1@@%'}],
-                ["style", "-o-transform-origin", [50,0],{valueTemplate:'@@0@@% @@1@@%'}],
+                ["style", "top", '408px'],
                 ["transform", "scaleY", '-7.91219'],
                 ["transform", "rotateZ", '-43deg'],
                 ["transform", "scaleX", '0.90436'],
                 ["style", "opacity", '0.36839979887008667'],
                 ["style", "left", '33px'],
-                ["style", "top", '408px']
+                ["style", "-webkit-transform-origin", [50,0], {valueTemplate:'@@0@@% @@1@@%'} ],
+                ["style", "-moz-transform-origin", [50,0],{valueTemplate:'@@0@@% @@1@@%'}],
+                ["style", "-ms-transform-origin", [50,0],{valueTemplate:'@@0@@% @@1@@%'}],
+                ["style", "msTransformOrigin", [50,0],{valueTemplate:'@@0@@% @@1@@%'}],
+                ["style", "-o-transform-origin", [50,0],{valueTemplate:'@@0@@% @@1@@%'}]
             ],
             "${_Text13}": [
-                ["color", "color", 'rgba(255,255,255,1.00)'],
                 ["style", "top", '90px'],
+                ["color", "color", 'rgba(255,255,255,1.00)'],
                 ["style", "left", '836px'],
                 ["style", "font-size", '18px']
             ],
             "${_Text6}": [
-                ["color", "color", 'rgba(0,0,0,1.00)'],
                 ["style", "top", '706px'],
+                ["color", "color", 'rgba(0,0,0,1.00)'],
                 ["style", "left", '478px'],
                 ["style", "font-size", '18px']
             ],
@@ -931,63 +883,46 @@ var symbols = {
                 ["style", "left", '12px'],
                 ["style", "top", '1453px']
             ],
-            "${_Text}": [
-                ["style", "top", '348px'],
+            "${_Text7Copy12}": [
+                ["style", "top", '1051px'],
                 ["transform", "scaleY", '1.40665'],
-                ["style", "left", '104px'],
-                ["transform", "scaleX", '1.40665']
+                ["transform", "scaleX", '1.40665'],
+                ["color", "color", 'rgba(255,255,255,1)'],
+                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
+                ["style", "left", '717px'],
+                ["style", "font-size", '12px']
             ],
             "${_Text7Copy9}": [
                 ["style", "top", '613px'],
                 ["transform", "scaleY", '1.40665'],
-                ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,233,0,1)'],
+                ["transform", "scaleX", '1.40665'],
                 ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
                 ["style", "left", '203px'],
                 ["style", "font-size", '15px']
             ],
-            "${_manitoCopy}": [
-                ["style", "left", '310px'],
-                ["style", "top", '1408px']
-            ],
-            "${_RoundRect3Copy8}": [
-                ["style", "top", '908px'],
-                ["transform", "scaleY", '1.57822'],
-                ["transform", "rotateZ", '-180deg'],
-                ["transform", "scaleX", '1.92446'],
-                ["gradient", "background-image", [270,[['rgba(255,2,8,1.00)',0],['rgba(140,17,17,1.00)',100]]]],
-                ["style", "left", '744px'],
-                ["style", "clip", [0,137.9140625,64,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
+            "${_Stage}": [
+                ["color", "background-color", 'rgba(248,135,0,1.00)'],
+                ["style", "min-width", '660px'],
+                ["style", "overflow", 'hidden'],
+                ["style", "height", '1240px'],
+                ["gradient", "background-image", [50,50,true,'farthest-corner',[['rgba(246,208,67,1.00)',26],['rgba(214,70,47,1.00)',100]]]],
+                ["style", "max-width", '1200px'],
+                ["style", "width", '988px']
             ],
             "${_Rectangle2}": [
                 ["color", "background-color", 'rgba(108,42,42,1.00)'],
-                ["style", "-webkit-transform-origin", [56.21,37.06], {valueTemplate:'@@0@@% @@1@@%'} ],
-                ["style", "-moz-transform-origin", [56.21,37.06],{valueTemplate:'@@0@@% @@1@@%'}],
-                ["style", "-ms-transform-origin", [56.21,37.06],{valueTemplate:'@@0@@% @@1@@%'}],
-                ["style", "msTransformOrigin", [56.21,37.06],{valueTemplate:'@@0@@% @@1@@%'}],
-                ["style", "-o-transform-origin", [56.21,37.06],{valueTemplate:'@@0@@% @@1@@%'}],
+                ["style", "top", '408px'],
                 ["transform", "scaleY", '-7.91219'],
                 ["transform", "rotateZ", '32deg'],
                 ["transform", "scaleX", '0.90436'],
                 ["style", "opacity", '0.36839978448276'],
                 ["style", "left", '29px'],
-                ["style", "top", '408px']
-            ],
-            "${_Text14}": [
-                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,1.00)'],
-                ["subproperty", "filter.drop-shadow.offsetV", '2px'],
-                ["transform", "scaleX", '1'],
-                ["style", "font-weight", '100'],
-                ["style", "left", '560px'],
-                ["style", "font-size", '22px'],
-                ["style", "top", '302px'],
-                ["style", "text-align", 'justify'],
-                ["transform", "scaleY", '1'],
-                ["style", "width", '398px'],
-                ["style", "height", '248px'],
-                ["style", "font-family", 'Verdana, Geneva, sans-serif'],
-                ["color", "color", 'rgba(255,255,255,1.00)'],
-                ["subproperty", "filter.drop-shadow.offsetH", '2px']
+                ["style", "-webkit-transform-origin", [56.21,37.06], {valueTemplate:'@@0@@% @@1@@%'} ],
+                ["style", "-moz-transform-origin", [56.21,37.06],{valueTemplate:'@@0@@% @@1@@%'}],
+                ["style", "-ms-transform-origin", [56.21,37.06],{valueTemplate:'@@0@@% @@1@@%'}],
+                ["style", "msTransformOrigin", [56.21,37.06],{valueTemplate:'@@0@@% @@1@@%'}],
+                ["style", "-o-transform-origin", [56.21,37.06],{valueTemplate:'@@0@@% @@1@@%'}]
             ],
             "${_Text8}": [
                 ["style", "top", '706px'],
@@ -1000,133 +935,117 @@ var symbols = {
             "${_Text3Copy3}": [
                 ["style", "top", '1197px'],
                 ["transform", "scaleY", '1.40665'],
-                ["style", "width", '78px'],
+                ["style", "font-size", '10px'],
                 ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,230,0,1)'],
                 ["style", "left", '906px'],
-                ["style", "font-size", '10px']
-            ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(248,135,0,1.00)'],
-                ["style", "min-width", '660px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "height", '1240px'],
-                ["gradient", "background-image", [50,50,true,'farthest-corner',[['rgba(246,208,67,1.00)',26],['rgba(214,70,47,1.00)',100]]]],
-                ["style", "max-width", '1200px'],
-                ["style", "width", '988px']
+                ["style", "width", '78px']
             ],
             "${_Text14Copy2}": [
                 ["subproperty", "filter.drop-shadow.color", 'rgba(4,4,4,1.00)'],
-                ["subproperty", "filter.drop-shadow.blur", '0px'],
-                ["subproperty", "filter.drop-shadow.offsetV", '2px'],
+                ["style", "text-align", 'justify'],
+                ["style", "width", '448px'],
                 ["transform", "scaleX", '1'],
                 ["style", "font-weight", '100'],
-                ["style", "left", '30px'],
-                ["style", "font-size", '22px'],
+                ["subproperty", "filter.drop-shadow.offsetV", '2px'],
+                ["subproperty", "filter.drop-shadow.blur", '0px'],
                 ["style", "top", '917px'],
                 ["subproperty", "filter.drop-shadow.offsetH", '2px'],
                 ["transform", "scaleY", '1'],
                 ["color", "color", 'rgba(255,255,255,1.00)'],
                 ["style", "height", '258px'],
                 ["style", "font-family", 'Verdana, Geneva, sans-serif'],
-                ["style", "width", '448px'],
-                ["style", "text-align", 'justify']
+                ["style", "font-size", '22px'],
+                ["style", "left", '30px']
             ],
             "${_Text7Copy}": [
                 ["style", "top", '379px'],
                 ["transform", "scaleY", '1.40665'],
-                ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,233,0,1.00)'],
+                ["transform", "scaleX", '1.40665'],
                 ["style", "font-family", 'Arial Black, Gadget, sans-serif'],
                 ["style", "left", '168px'],
                 ["style", "font-size", '15px']
             ],
             "${_Text4}": [
-                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.631373)'],
-                ["subproperty", "filter.drop-shadow.offsetH", '1px'],
-                ["subproperty", "filter.drop-shadow.offsetV", '1px'],
                 ["style", "top", '301px'],
+                ["style", "font-size", '28px'],
+                ["style", "left", '182px'],
+                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.631373)'],
                 ["style", "width", '185px'],
                 ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '182px'],
-                ["style", "font-size", '28px']
-            ],
-            "${_Text3}": [
-                ["style", "top", '369px'],
-                ["transform", "scaleY", '1.40665'],
-                ["transform", "scaleX", '1.40665'],
-                ["style", "width", '78px'],
-                ["style", "left", '37px'],
-                ["style", "font-size", '12px']
-            ],
-            "${_Text7Copy5}": [
-                ["style", "top", '515px'],
-                ["transform", "scaleY", '1.40665'],
-                ["transform", "scaleX", '1.40665'],
-                ["color", "color", 'rgba(255,255,255,1)'],
-                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
-                ["style", "left", '63px'],
-                ["style", "font-size", '12px']
+                ["subproperty", "filter.drop-shadow.offsetV", '1px'],
+                ["subproperty", "filter.drop-shadow.offsetH", '1px']
             ],
             "${_Text3Copy6}": [
                 ["style", "top", '1176px'],
                 ["transform", "scaleY", '1.40665'],
                 ["transform", "scaleX", '1.40665'],
-                ["style", "width", '78px'],
+                ["style", "font-size", '9px'],
                 ["style", "left", '719px'],
-                ["style", "font-size", '9px']
-            ],
-            "${_title}": [
-                ["style", "top", '15px'],
-                ["transform", "scaleY", '1.5'],
-                ["transform", "scaleX", '1.5'],
-                ["color", "color", 'rgba(255,255,255,1.00)'],
-                ["style", "font-family", 'Verdana, Geneva, sans-serif'],
-                ["style", "left", '212px'],
-                ["style", "font-size", '25px']
+                ["style", "width", '78px']
             ],
             "${_Group}": [
                 ["style", "top", '1384px'],
                 ["style", "left", '696px'],
                 ["style", "cursor", 'pointer']
             ],
-            "${_Text3Copy5}": [
-                ["style", "top", '641px'],
-                ["transform", "scaleY", '1.40665'],
-                ["transform", "scaleX", '1.40665'],
-                ["color", "color", 'rgba(255,230,0,1.00)'],
-                ["style", "font-size", '10px'],
-                ["style", "left", '215px'],
-                ["style", "width", '78px']
+            "${_RoundRect3Copy11}": [
+                ["style", "top", '581px'],
+                ["transform", "scaleY", '1.57822'],
+                ["transform", "rotateZ", '0deg'],
+                ["transform", "scaleX", '1.92446'],
+                ["gradient", "background-image", [270,[['rgba(255,2,8,1.00)',0],['rgba(140,17,17,1.00)',100]]]],
+                ["style", "left", '72px'],
+                ["style", "clip", [0,137.9140625,64,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
             ],
-            "${_Text2}": [
-                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.58)'],
-                ["transform", "scaleX", '0.9896'],
-                ["style", "left", '292px'],
-                ["style", "font-size", '66px'],
-                ["style", "top", '110px'],
-                ["transform", "scaleY", '1.44581'],
-                ["subproperty", "filter.drop-shadow.offsetV", '1px'],
-                ["style", "font-family", 'Lucida Console, Monaco, monospace'],
-                ["subproperty", "filter.drop-shadow.offsetH", '1px'],
-                ["style", "width", '440px']
+            "${_Text}": [
+                ["style", "top", '348px'],
+                ["transform", "scaleX", '1.40665'],
+                ["transform", "scaleY", '1.40665'],
+                ["style", "left", '104px']
+            ],
+            "${_manitoCopy}": [
+                ["style", "left", '310px'],
+                ["style", "top", '1408px']
+            ],
+            "${_smartphone1}": [
+                ["style", "left", '265px'],
+                ["style", "top", '302px']
             ],
             "${_Text7Copy6}": [
                 ["style", "top", '1176px'],
                 ["transform", "scaleY", '1.40665'],
-                ["color", "color", 'rgba(255,233,0,1)'],
                 ["transform", "scaleX", '1.40665'],
+                ["color", "color", 'rgba(255,233,0,1)'],
                 ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
                 ["style", "left", '806px'],
                 ["style", "font-size", '15px']
+            ],
+            "${_title}": [
+                ["style", "top", '15px'],
+                ["transform", "scaleY", '1.5'],
+                ["color", "color", 'rgba(255,255,255,1.00)'],
+                ["transform", "scaleX", '1.5'],
+                ["style", "font-family", 'Verdana, Geneva, sans-serif'],
+                ["style", "left", '212px'],
+                ["style", "font-size", '25px']
+            ],
+            "${_Text3}": [
+                ["style", "top", '369px'],
+                ["transform", "scaleY", '1.40665'],
+                ["transform", "scaleX", '1.40665'],
+                ["style", "font-size", '12px'],
+                ["style", "left", '37px'],
+                ["style", "width", '78px']
             ],
             "${_Text3Copy9}": [
                 ["style", "top", '931px'],
                 ["transform", "scaleY", '1.40665'],
                 ["transform", "scaleX", '1.40665'],
-                ["style", "font-size", '10px'],
+                ["style", "width", '78px'],
                 ["style", "left", '726px'],
-                ["style", "width", '78px']
+                ["style", "font-size", '10px']
             ],
             "${_RoundRect}": [
                 ["color", "background-color", 'rgba(255,255,255,0.51)'],
@@ -1138,8 +1057,8 @@ var symbols = {
             "${_Text7}": [
                 ["style", "top", '392px'],
                 ["transform", "scaleY", '1.40665'],
-                ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,255,255,1.00)'],
+                ["transform", "scaleX", '1.40665'],
                 ["style", "font-family", 'Arial, Helvetica, sans-serif'],
                 ["style", "left", '32px'],
                 ["style", "font-size", '15px']
@@ -1149,14 +1068,30 @@ var symbols = {
                 ["style", "font-family", 'Arial Black, Gadget, sans-serif'],
                 ["style", "left", '587px']
             ],
-            "${_Text7Copy8}": [
-                ["style", "top", '1035px'],
-                ["transform", "scaleY", '1.40665'],
-                ["color", "color", 'rgba(255,233,0,1)'],
-                ["transform", "scaleX", '1.40665'],
-                ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
-                ["style", "left", '843px'],
-                ["style", "font-size", '15px']
+            "${_Text14}": [
+                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,1.00)'],
+                ["subproperty", "filter.drop-shadow.offsetH", '2px'],
+                ["transform", "scaleX", '1'],
+                ["style", "font-weight", '100'],
+                ["subproperty", "filter.drop-shadow.offsetV", '2px'],
+                ["style", "font-size", '22px'],
+                ["style", "top", '302px'],
+                ["color", "color", 'rgba(255,255,255,1.00)'],
+                ["style", "text-align", 'justify'],
+                ["style", "width", '398px'],
+                ["style", "height", '248px'],
+                ["style", "font-family", 'Verdana, Geneva, sans-serif'],
+                ["transform", "scaleY", '1'],
+                ["style", "left", '560px']
+            ],
+            "${_Rectangle2Copy3}": [
+                ["color", "background-color", 'rgba(108,42,42,1)'],
+                ["transform", "scaleY", '-7.91219'],
+                ["transform", "rotateZ", '25deg'],
+                ["transform", "scaleX", '0.90436'],
+                ["style", "opacity", '0.36839979887008667'],
+                ["style", "left", '714px'],
+                ["style", "top", '963px']
             ],
             "${_Text5}": [
                 ["style", "top", '724px'],
@@ -1173,16 +1108,18 @@ var symbols = {
                 ["style", "top", '1279px'],
                 ["transform", "scaleY", '1.19615'],
                 ["style", "height", '51px'],
-                ["transform", "scaleX", '1.19615'],
+                ["style", "left", '351px'],
                 ["style", "width", '236px'],
-                ["style", "left", '351px']
+                ["transform", "scaleX", '1.19615']
             ],
-            "${_Text7Copy10}": [
-                ["style", "top", '681px'],
-                ["color", "color", 'rgba(5,61,248,1.00)'],
-                ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
-                ["style", "left", '34px'],
-                ["style", "font-size", '25px']
+            "${_Rectangle2Copy2}": [
+                ["color", "background-color", 'rgba(108,42,42,1)'],
+                ["transform", "scaleY", '-7.91219'],
+                ["transform", "rotateZ", '-50deg'],
+                ["transform", "scaleX", '0.90436'],
+                ["style", "opacity", '0.36839979887008667'],
+                ["style", "left", '714px'],
+                ["style", "top", '963px']
             ],
             "${_TextCopy2}": [
                 ["style", "top", '578px'],
@@ -1190,6 +1127,23 @@ var symbols = {
                 ["transform", "scaleX", '1.40665'],
                 ["style", "left", '86px'],
                 ["transform", "scaleY", '1.40665']
+            ],
+            "${_delgado}": [
+                ["style", "top", '264px'],
+                ["transform", "scaleX", '0.59321'],
+                ["transform", "scaleY", '0.8004'],
+                ["style", "left", '484px']
+            ],
+            "${_RectangleCopy2}": [
+                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.458824)'],
+                ["subproperty", "filter.hue-rotate", '0deg'],
+                ["gradient", "background-image", [180,[['rgba(191,191,191,1.00)',0],['rgba(255,255,255,1.00)',100]]]],
+                ["subproperty", "filter.drop-shadow.offsetV", '3px'],
+                ["subproperty", "filter.drop-shadow.blur", '2px'],
+                ["style", "top", '1372px'],
+                ["style", "height", '46px'],
+                ["style", "left", '101px'],
+                ["style", "width", '295px']
             ],
             "${_Rectangle}": [
                 ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,0.458824)'],
@@ -1199,8 +1153,8 @@ var symbols = {
                 ["subproperty", "filter.drop-shadow.blur", '2px'],
                 ["style", "top", '1372px'],
                 ["style", "height", '46px'],
-                ["style", "left", '570px'],
-                ["style", "width", '295px']
+                ["style", "width", '295px'],
+                ["style", "left", '570px']
             ],
             "${_camara2}": [
                 ["style", "top", '61px'],
@@ -1209,16 +1163,18 @@ var symbols = {
                 ["style", "cursor", 'pointer'],
                 ["style", "left", '585px']
             ],
-            "${_logoprensa}": [
-                ["style", "left", '782px'],
-                ["style", "top", '1474px']
-            ],
             "${_Text7Copy11}": [
                 ["style", "top", '1225px'],
                 ["color", "color", 'rgba(0,59,255,1.00)'],
                 ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
                 ["style", "left", '732px'],
                 ["style", "font-size", '25px']
+            ],
+            "${_TextCopy9}": [
+                ["transform", "scaleX", '1.40665'],
+                ["style", "left", '781px'],
+                ["transform", "scaleY", '1.40665'],
+                ["style", "top", '904px']
             ],
             "${_RoundRect3Copy10}": [
                 ["style", "top", '1134px'],
@@ -1228,6 +1184,26 @@ var symbols = {
                 ["gradient", "background-image", [270,[['rgba(255,2,8,1.00)',0],['rgba(140,17,17,1.00)',100]]]],
                 ["style", "left", '744px'],
                 ["style", "clip", [0,137.9140625,64,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
+            ],
+            "${_Text7Copy10}": [
+                ["style", "top", '681px'],
+                ["color", "color", 'rgba(5,61,248,1.00)'],
+                ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
+                ["style", "left", '34px'],
+                ["style", "font-size", '25px']
+            ],
+            "${_Text7Copy14}": [
+                ["style", "top", '929px'],
+                ["transform", "scaleY", '1.40665'],
+                ["transform", "scaleX", '1.40665'],
+                ["color", "color", 'rgba(255,233,0,1)'],
+                ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
+                ["style", "left", '845px'],
+                ["style", "font-size", '15px']
+            ],
+            "${_smarthphone2}": [
+                ["style", "top", '852px'],
+                ["style", "left", '496px']
             ],
             "${_Text17}": [
                 ["color", "color", 'rgba(13,28,233,1.00)'],
@@ -1243,6 +1219,25 @@ var symbols = {
                 ["style", "left", '72px'],
                 ["style", "clip", [0,137.9140625,64,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ]
             ],
+            "${_Text4Copy}": [
+                ["style", "top", '811px'],
+                ["style", "width", '205px'],
+                ["style", "left", '508px'],
+                ["subproperty", "filter.drop-shadow.color", 'rgba(0,0,0,1.00)'],
+                ["style", "font-size", '28px'],
+                ["style", "font-family", 'Arial, Helvetica, sans-serif'],
+                ["subproperty", "filter.drop-shadow.offsetV", '2px'],
+                ["subproperty", "filter.drop-shadow.offsetH", '2px']
+            ],
+            "${_Text7Copy8}": [
+                ["style", "top", '1035px'],
+                ["transform", "scaleY", '1.40665'],
+                ["transform", "scaleX", '1.40665'],
+                ["color", "color", 'rgba(255,233,0,1)'],
+                ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
+                ["style", "left", '843px'],
+                ["style", "font-size", '15px']
+            ],
             "${_Text7Copy17}": [
                 ["style", "top", '632px'],
                 ["color", "color", 'rgba(5,61,248,1)'],
@@ -1253,8 +1248,8 @@ var symbols = {
             "${_Text7Copy15}": [
                 ["style", "top", '953px'],
                 ["transform", "scaleY", '1.40665'],
-                ["color", "color", 'rgba(255,255,255,1)'],
                 ["transform", "scaleX", '1.40665'],
+                ["color", "color", 'rgba(255,255,255,1)'],
                 ["style", "font-family", 'Arial, Helvetica, sans-serif'],
                 ["style", "left", '714px'],
                 ["style", "font-size", '15px']
@@ -1265,11 +1260,16 @@ var symbols = {
                 ["style", "left", '0px'],
                 ["color", "color", 'rgba(255,255,255,1.00)']
             ],
+            "${_Ellipse}": [
+                ["style", "top", '0px'],
+                ["style", "left", '0px'],
+                ["color", "background-color", 'rgba(24,57,202,0.65)']
+            ],
             "${_Text7Copy4}": [
                 ["style", "top", '475px'],
                 ["transform", "scaleY", '1.40665'],
-                ["transform", "scaleX", '1.40665'],
                 ["color", "color", 'rgba(255,233,0,1)'],
+                ["transform", "scaleX", '1.40665'],
                 ["style", "font-family", '\'Arial Black\', Gadget, sans-serif'],
                 ["style", "left", '160px'],
                 ["style", "font-size", '15px']
@@ -1283,9 +1283,9 @@ var symbols = {
             ],
             "${_manitoCopy2}": [
                 ["style", "top", '1320px'],
+                ["transform", "scaleX", '0.94444'],
                 ["transform", "scaleY", '0.94444'],
-                ["style", "left", '483px'],
-                ["transform", "scaleX", '0.94444']
+                ["style", "left", '483px']
             ]
         }
     },
@@ -1296,38 +1296,38 @@ var symbols = {
             duration: 454,
             autoPlay: true,
             timeline: [
-                { id: "eid42", tween: [ "transform", "${_title}", "scaleX", '1.5', { fromValue: '1.5'}], position: 454, duration: 0 },
-                { id: "eid74", tween: [ "style", "${_Text13}", "font-size", '18px', { fromValue: '18px'}], position: 454, duration: 0 },
-                { id: "eid54", tween: [ "transform", "${_camara2}", "scaleY", '1.06711', { fromValue: '1.06711'}], position: 454, duration: 0 },
+                { id: "eid53", tween: [ "transform", "${_camara2}", "scaleX", '1.06711', { fromValue: '1.06711'}], position: 454, duration: 0 },
+                { id: "eid31", tween: [ "style", "${_Text4}", "top", '266px', { fromValue: '301px'}], position: 0, duration: 454 },
+                { id: "eid28", tween: [ "style", "${_title}", "left", '333px', { fromValue: '212px'}], position: 0, duration: 454 },
                 { id: "eid69", tween: [ "style", "${_Text4Copy}", "width", '205px', { fromValue: '205px'}], position: 454, duration: 0 },
                 { id: "eid72", tween: [ "style", "${_Text4}", "font-size", '28px', { fromValue: '28px'}], position: 454, duration: 0 },
-                { id: "eid71", tween: [ "style", "${_Text4Copy}", "top", '811px', { fromValue: '811px'}], position: 454, duration: 0 },
-                { id: "eid53", tween: [ "transform", "${_camara2}", "scaleX", '1.06711', { fromValue: '1.06711'}], position: 454, duration: 0 },
-                { id: "eid48", tween: [ "subproperty", "${_Text4Copy}", "filter.drop-shadow.color", 'rgba(0,0,0,1.00)', { fromValue: 'rgba(0,0,0,1.00)'}], position: 454, duration: 0 },
-                { id: "eid47", tween: [ "subproperty", "${_Text4Copy}", "filter.drop-shadow.offsetV", '2px', { fromValue: '2px'}], position: 454, duration: 0 },
-                { id: "eid70", tween: [ "style", "${_Text4Copy}", "left", '508px', { fromValue: '508px'}], position: 454, duration: 0 },
                 { id: "eid44", tween: [ "subproperty", "${_Text4Copy}", "filter.drop-shadow.offsetH", '2px', { fromValue: '2px'}], position: 454, duration: 0 },
+                { id: "eid80", tween: [ "gradient", "${_Stage}", "background-image", [50,50,true,'farthest-corner',[['rgba(246,208,67,1.00)',26],['rgba(214,70,47,1.00)',100]]], { fromValue: [50,50,true,'farthest-corner',[['rgba(246,208,67,1.00)',26],['rgba(214,70,47,1.00)',100]]]}], position: 0, duration: 0 },
+                { id: "eid71", tween: [ "style", "${_Text4Copy}", "top", '811px', { fromValue: '811px'}], position: 454, duration: 0 },
+                { id: "eid58", tween: [ "style", "${_Stage}", "height", '1550px', { fromValue: '1240px'}], position: 0, duration: 454 },
+                { id: "eid70", tween: [ "style", "${_Text4Copy}", "left", '508px', { fromValue: '508px'}], position: 454, duration: 0 },
+                { id: "eid29", tween: [ "style", "${_title}", "top", '61px', { fromValue: '15px'}], position: 0, duration: 454 },
                 { id: "eid43", tween: [ "transform", "${_title}", "scaleY", '1.5', { fromValue: '1.5'}], position: 454, duration: 0 },
-                { id: "eid28", tween: [ "style", "${_title}", "left", '333px', { fromValue: '212px'}], position: 0, duration: 454 },
+                { id: "eid48", tween: [ "subproperty", "${_Text4Copy}", "filter.drop-shadow.color", 'rgba(0,0,0,1.00)', { fromValue: 'rgba(0,0,0,1.00)'}], position: 454, duration: 0 },
                 { id: "eid79", tween: [ "color", "${_Stage}", "background-color", 'rgba(248,135,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(248,135,0,1.00)'}], position: 0, duration: 0 },
+                { id: "eid49", tween: [ "subproperty", "${_Text4}", "filter.drop-shadow.color", 'rgba(0,0,0,1.00)', { fromValue: 'rgba(0,0,0,0.631373)'}], position: 0, duration: 454 },
+                { id: "eid42", tween: [ "transform", "${_title}", "scaleX", '1.5', { fromValue: '1.5'}], position: 454, duration: 0 },
+                { id: "eid73", tween: [ "style", "${_Text4}", "width", '185px', { fromValue: '185px'}], position: 454, duration: 0 },
                 { id: "eid57", tween: [ "style", "${_Text13}", "top", '90px', { fromValue: '90px'}], position: 454, duration: 0 },
-                { id: "eid56", tween: [ "style", "${_Text13}", "left", '836px', { fromValue: '836px'}], position: 454, duration: 0 },
-                { id: "eid30", tween: [ "style", "${_Text4}", "left", '279px', { fromValue: '182px'}], position: 0, duration: 454 },
-                { id: "eid11", tween: [ "style", "${_Text12}", "top", '7px', { fromValue: '7px'}], position: 0, duration: 0 },
                 { id: "eid27", tween: [ "style", "${_camara2}", "left", '837px', { fromValue: '585px'}], position: 0, duration: 454 },
                 { id: "eid51", tween: [ "subproperty", "${_Text4}", "filter.drop-shadow.offsetV", '2px', { fromValue: '1px'}], position: 0, duration: 454 },
                 { id: "eid26", tween: [ "style", "${_Stage}", "width", '988px', { fromValue: '988px'}], position: 454, duration: 0 },
                 { id: "eid12", tween: [ "style", "${_camara2}", "top", '123px', { fromValue: '61px'}], position: 0, duration: 227 },
                 { id: "eid13", tween: [ "style", "${_camara2}", "top", '55px', { fromValue: '61px'}], position: 227, duration: 227 },
-                { id: "eid73", tween: [ "style", "${_Text4}", "width", '185px', { fromValue: '185px'}], position: 454, duration: 0 },
+                { id: "eid11", tween: [ "style", "${_Text12}", "top", '7px', { fromValue: '7px'}], position: 0, duration: 0 },
                 { id: "eid10", tween: [ "style", "${_Text12}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid49", tween: [ "subproperty", "${_Text4}", "filter.drop-shadow.color", 'rgba(0,0,0,1.00)', { fromValue: 'rgba(0,0,0,0.631373)'}], position: 0, duration: 454 },
-                { id: "eid29", tween: [ "style", "${_title}", "top", '61px', { fromValue: '15px'}], position: 0, duration: 454 },
-                { id: "eid58", tween: [ "style", "${_Stage}", "height", '1550px', { fromValue: '1240px'}], position: 0, duration: 454 },
+                { id: "eid56", tween: [ "style", "${_Text13}", "left", '836px', { fromValue: '836px'}], position: 454, duration: 0 },
+                { id: "eid30", tween: [ "style", "${_Text4}", "left", '279px', { fromValue: '182px'}], position: 0, duration: 454 },
+                { id: "eid74", tween: [ "style", "${_Text13}", "font-size", '18px', { fromValue: '18px'}], position: 454, duration: 0 },
                 { id: "eid68", tween: [ "style", "${_Text4Copy}", "font-size", '28px', { fromValue: '28px'}], position: 454, duration: 0 },
-                { id: "eid80", tween: [ "gradient", "${_Stage}", "background-image", [50,50,true,'farthest-corner',[['rgba(246,208,67,1.00)',26],['rgba(214,70,47,1.00)',100]]], { fromValue: [50,50,true,'farthest-corner',[['rgba(246,208,67,1.00)',26],['rgba(214,70,47,1.00)',100]]]}], position: 0, duration: 0 },
+                { id: "eid54", tween: [ "transform", "${_camara2}", "scaleY", '1.06711', { fromValue: '1.06711'}], position: 454, duration: 0 },
                 { id: "eid50", tween: [ "subproperty", "${_Text4}", "filter.drop-shadow.offsetH", '2px', { fromValue: '1px'}], position: 0, duration: 454 },
-                { id: "eid31", tween: [ "style", "${_Text4}", "top", '266px', { fromValue: '301px'}], position: 0, duration: 454 }            ]
+                { id: "eid47", tween: [ "subproperty", "${_Text4Copy}", "filter.drop-shadow.offsetV", '2px', { fromValue: '2px'}], position: 454, duration: 0 }            ]
         }
     }
 },
@@ -1355,13 +1355,13 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_camara}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
             "${symbolSelector}": [
                 ["style", "height", '29px'],
                 ["style", "width", '34px']
+            ],
+            "${_camara}": [
+                ["style", "top", '0px'],
+                ["style", "left", '0px']
             ]
         }
     },
@@ -1389,12 +1389,12 @@ var symbols = {
     content: {
             dom: [
                 {
-                    rect: ['0px', '0px', 'auto', 'auto', 'auto', 'auto'],
                     font: ['Arial, Helvetica, sans-serif', 16, 'rgba(12,22,174,1.00)', '100', 'none', 'normal'],
+                    type: 'text',
                     id: 'Text10',
                     text: 'RESERVE AQUI',
                     align: 'left',
-                    type: 'text'
+                    rect: ['0px', '0px', 'auto', 'auto', 'auto', 'auto']
                 }
             ],
             symbolInstances: [
@@ -1402,15 +1402,15 @@ var symbols = {
         },
     states: {
         "Base State": {
+            "${_Text10}": [
+                ["color", "color", 'rgba(12,22,174,1.00)'],
+                ["style", "top", '0px'],
+                ["style", "left", '0px'],
+                ["style", "font-size", '16px']
+            ],
             "${symbolSelector}": [
                 ["style", "height", '18px'],
                 ["style", "width", '177px']
-            ],
-            "${_Text10}": [
-                ["style", "top", '0px'],
-                ["color", "color", 'rgba(12,22,174,1.00)'],
-                ["style", "left", '0px'],
-                ["style", "font-size", '16px']
             ]
         }
     },

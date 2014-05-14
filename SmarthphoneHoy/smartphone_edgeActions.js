@@ -13,28 +13,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    (function(symbolName) {
       
       
-      Symbol.bindElementAction(compId, symbolName, "${_camara2}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_RectangleCopy4}", "click", function(sym, e) {
          // Ir a una nueva dirección URL en la ventana actual
          // (sustituya "_self" por un atributo de destino para una nueva ventana)
-         window.open("https://www.youtube.com/watch?v=tGx44pPiVxY&index=2&list=PLLSDIHSJqOp0LOusqYQDUKiKfGSRBDUC6", "_blanck");
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${_Group3}", "click", function(sym, e) {
-         // Ir a una nueva dirección URL en la ventana actual
-         // (sustituya "_self" por un atributo de destino para una nueva ventana)
-         window.open("basesdelapromocion.pdf", "_blanck");
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${_aqui}", "click", function(sym, e) {
-         // Ir a una nueva dirección URL en la ventana actual
-         // (sustituya "_self" por un atributo de destino para una nueva ventana)
-         window.open("http://laprensa-hoy.promocionyreserva.com/reservarHoy.php", "_blanck");
+         window.open("http://laprensa-hoy.promocionyreserva.com/reservarHoy.php", "_blank");
          
 
       });
@@ -43,7 +25,25 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${_Group}", "click", function(sym, e) {
          // Ir a una nueva dirección URL en la ventana actual
          // (sustituya "_self" por un atributo de destino para una nueva ventana)
-         window.open("http://laprensa-hoy.promocionyreserva.com/consulta_hoy_smartphone.php", "_blanck");
+         window.open("http://laprensa-hoy.promocionyreserva.com/consulta_hoy_smartphone.php", "_blank");
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_RectangleCopy2}", "click", function(sym, e) {
+         // Ir a una nueva dirección URL en la ventana actual
+         // (sustituya "_self" por un atributo de destino para una nueva ventana)
+         window.open("basesdelapromocion.doc", "_blank");
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${_camara2}", "click", function(sym, e) {
+         // Ir a una nueva dirección URL en la ventana actual
+         // (sustituya "_self" por un atributo de destino para una nueva ventana)
+         window.open("https://www.youtube.com/watch?v=tGx44pPiVxY&index=2&list=PLLSDIHSJqOp0LOusqYQDUKiKfGSRBDUC6", "_blank");
          
 
       });

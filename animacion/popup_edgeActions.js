@@ -16,7 +16,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       Symbol.bindElementAction(compId, symbolName, "${_manito3}", "click", function(sym, e) {
          // Ir a una nueva dirección URL en la ventana actual
          // (sustituya "_self" por un atributo de destino para una nueva ventana)
-         window.open("http://www.laprensa.com.ni", "_self");
+         window.open("http://laprensa-hoy.promocionyreserva.com/reservarPrensa.php", "_blank");
          
 
       });

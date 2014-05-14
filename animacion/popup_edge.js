@@ -69,30 +69,31 @@ var symbols = {
                 id: 'manito3',
                 type: 'rect',
                 rect: ['245', '401','auto','auto','auto', 'auto']
+            },
+            {
+                id: 'Rectangle',
+                type: 'rect',
+                rect: ['0px', '0px','400px','400px','auto', 'auto'],
+                cursor: ['pointer'],
+                opacity: 0,
+                fill: ["rgba(192,192,192,1)"],
+                stroke: [0,"rgba(0,0,0,1)","none"]
             }],
             symbolInstances: [
             {
                 id: 'manito3',
-                symbolName: 'manito'
+                symbolName: 'manito',
+                autoPlay: {
+
+                }
             }
             ]
         },
     states: {
         "Base State": {
-            "${_cel2}": [
-                ["style", "left", '404px'],
-                ["style", "top", '174px']
-            ],
             "${_cel1}": [
                 ["style", "top", '174px'],
                 ["style", "left", '-114px']
-            ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(248,135,0,1.00)'],
-                ["style", "overflow", 'hidden'],
-                ["style", "height", '400px'],
-                ["gradient", "background-image", [50,50,true,'farthest-corner',[['rgba(246,208,68,0.87)',0],['rgba(183,0,0,1.00)',100]]]],
-                ["style", "width", '400px']
             ],
             "${_Text3}": [
                 ["subproperty", "textShadow.blur", '0px'],
@@ -103,8 +104,8 @@ var symbols = {
                 ["transform", "scaleY", '1.37245'],
                 ["style", "height", '46px'],
                 ["style", "font-family", 'gruppo, sans-serif'],
-                ["subproperty", "textShadow.color", 'rgba(0,0,0,0.65098)'],
-                ["subproperty", "textShadow.offsetV", '2px']
+                ["subproperty", "textShadow.offsetV", '2px'],
+                ["subproperty", "textShadow.color", 'rgba(0,0,0,0.65098)']
             ],
             "${_Text2}": [
                 ["subproperty", "textShadow.blur", '3px'],
@@ -117,15 +118,30 @@ var symbols = {
                 ["transform", "scaleY", '1.57336'],
                 ["subproperty", "textShadow.color", 'rgba(0,0,0,0.65098)']
             ],
+            "${_Stage}": [
+                ["color", "background-color", 'rgba(248,135,0,1.00)'],
+                ["style", "overflow", 'hidden'],
+                ["style", "height", '400px'],
+                ["gradient", "background-image", [50,50,true,'farthest-corner',[['rgba(246,208,68,0.87)',0],['rgba(183,0,0,1.00)',100]]]],
+                ["style", "width", '400px']
+            ],
+            "${_Rectangle}": [
+                ["style", "cursor", 'pointer'],
+                ["style", "opacity", '0']
+            ],
+            "${_cel2}": [
+                ["style", "left", '404px'],
+                ["style", "top", '174px']
+            ],
             "${_Text4}": [
                 ["style", "top", '194px'],
                 ["subproperty", "textShadow.offsetH", '2px'],
                 ["transform", "scaleY", '1.4682'],
-                ["subproperty", "textShadow.color", 'rgba(0,0,0,0.65098)'],
-                ["subproperty", "textShadow.blur", '0px'],
+                ["subproperty", "textShadow.offsetV", '2px'],
                 ["style", "font-family", 'gruppo, sans-serif'],
+                ["subproperty", "textShadow.color", 'rgba(0,0,0,0.65098)'],
                 ["style", "left", '402px'],
-                ["subproperty", "textShadow.offsetV", '2px']
+                ["subproperty", "textShadow.blur", '0px']
             ]
         }
     },
@@ -157,10 +173,10 @@ var symbols = {
     content: {
             dom: [
                 {
-                    rect: ['16px', '-130px', '110px', '92px', 'auto', 'auto'],
+                    transform: [[0, 0], ['40']],
                     id: 'manito',
-                    transform: [[], ['40']],
                     type: 'image',
+                    rect: ['16px', '-130px', '110px', '92px', 'auto', 'auto'],
                     fill: ['rgba(0,0,0,0)', 'images/manito.svg', '0px', '0px']
                 }
             ],

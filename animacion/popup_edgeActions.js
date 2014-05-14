@@ -13,7 +13,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    (function(symbolName) {
       
       
-      Symbol.bindElementAction(compId, symbolName, "${_manito3}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "click", function(sym, e) {
          // Ir a una nueva dirección URL en la ventana actual
          // (sustituya "_self" por un atributo de destino para una nueva ventana)
          window.open("http://laprensa-hoy.promocionyreserva.com/reservarPrensa.php", "_blank");
@@ -24,13 +24,5 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
    })("stage");
    //Edge symbol end:'stage'
-
-   //=========================================================
-   
-   //Edge symbol: 'manito'
-   (function(symbolName) {   
-   
-   })("manito");
-   //Edge symbol end:'manito'
 
 })(jQuery, AdobeEdge, "EDGE-410526");

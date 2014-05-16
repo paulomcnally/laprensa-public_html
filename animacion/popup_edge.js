@@ -66,34 +66,41 @@ var symbols = {
                 fill: ["rgba(0,0,0,0)",im+"cel2.png",'0px','0px']
             },
             {
-                id: 'manito3',
-                type: 'rect',
-                rect: ['245', '401','auto','auto','auto', 'auto']
+                id: 'manito1',
+                type: 'image',
+                rect: ['517px', '286px','102px','125px','auto', 'auto'],
+                fill: ["rgba(0,0,0,0)",im+"manito1.svg",'0px','0px']
             },
             {
                 id: 'Rectangle',
                 type: 'rect',
                 rect: ['0px', '0px','400px','400px','auto', 'auto'],
                 cursor: ['pointer'],
-                opacity: 0,
                 fill: ["rgba(192,192,192,1)"],
                 stroke: [0,"rgba(0,0,0,1)","none"]
             }],
             symbolInstances: [
-            {
-                id: 'manito3',
-                symbolName: 'manito',
-                autoPlay: {
 
-                }
-            }
             ]
         },
     states: {
         "Base State": {
-            "${_cel1}": [
-                ["style", "top", '174px'],
-                ["style", "left", '-114px']
+            "${_cel2}": [
+                ["style", "left", '404px'],
+                ["style", "top", '174px']
+            ],
+            "${_Stage}": [
+                ["color", "background-color", 'rgba(39,170,222,1.00)'],
+                ["style", "overflow", 'hidden'],
+                ["style", "height", '400px'],
+                ["gradient", "background-image", [50,50,true,'farthest-corner',[['rgba(18,208,239,0.87)',0],['rgba(58,99,151,1.00)',100]]]],
+                ["style", "width", '400px']
+            ],
+            "${_manito1}": [
+                ["style", "top", '286px'],
+                ["style", "height", '125px'],
+                ["style", "left", '517px'],
+                ["style", "width", '102px']
             ],
             "${_Text3}": [
                 ["subproperty", "textShadow.blur", '0px'],
@@ -104,8 +111,16 @@ var symbols = {
                 ["transform", "scaleY", '1.37245'],
                 ["style", "height", '46px'],
                 ["style", "font-family", 'gruppo, sans-serif'],
-                ["subproperty", "textShadow.offsetV", '2px'],
-                ["subproperty", "textShadow.color", 'rgba(0,0,0,0.65098)']
+                ["subproperty", "textShadow.color", 'rgba(0,0,0,0.65098)'],
+                ["subproperty", "textShadow.offsetV", '2px']
+            ],
+            "${_cel1}": [
+                ["style", "top", '174px'],
+                ["style", "left", '-114px']
+            ],
+            "${_Rectangle}": [
+                ["style", "cursor", 'pointer'],
+                ["style", "opacity", '0']
             ],
             "${_Text2}": [
                 ["subproperty", "textShadow.blur", '3px'],
@@ -118,30 +133,15 @@ var symbols = {
                 ["transform", "scaleY", '1.57336'],
                 ["subproperty", "textShadow.color", 'rgba(0,0,0,0.65098)']
             ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(248,135,0,1.00)'],
-                ["style", "overflow", 'hidden'],
-                ["style", "height", '400px'],
-                ["gradient", "background-image", [50,50,true,'farthest-corner',[['rgba(246,208,68,0.87)',0],['rgba(183,0,0,1.00)',100]]]],
-                ["style", "width", '400px']
-            ],
-            "${_Rectangle}": [
-                ["style", "cursor", 'pointer'],
-                ["style", "opacity", '0']
-            ],
-            "${_cel2}": [
-                ["style", "left", '404px'],
-                ["style", "top", '174px']
-            ],
             "${_Text4}": [
                 ["style", "top", '194px'],
                 ["subproperty", "textShadow.offsetH", '2px'],
                 ["transform", "scaleY", '1.4682'],
-                ["subproperty", "textShadow.offsetV", '2px'],
-                ["style", "font-family", 'gruppo, sans-serif'],
+                ["subproperty", "textShadow.blur", '0px'],
                 ["subproperty", "textShadow.color", 'rgba(0,0,0,0.65098)'],
+                ["subproperty", "textShadow.offsetV", '2px'],
                 ["style", "left", '402px'],
-                ["subproperty", "textShadow.blur", '0px']
+                ["style", "font-family", 'gruppo, sans-serif']
             ]
         }
     },
@@ -153,8 +153,10 @@ var symbols = {
             autoPlay: true,
             timeline: [
                 { id: "eid4", tween: [ "style", "${_Text2}", "left", '-12px', { fromValue: '-393px'}], position: 459, duration: 541 },
+                { id: "eid3", tween: [ "style", "${_manito1}", "top", '258px', { fromValue: '286px'}], position: 2250, duration: 500 },
                 { id: "eid6", tween: [ "style", "${_cel1}", "left", '24px', { fromValue: '-114px'}], position: 1000, duration: 433, easing: "easeInOutCirc" },
                 { id: "eid8", tween: [ "style", "${_cel2}", "left", '138px', { fromValue: '404px'}], position: 1433, duration: 446, easing: "easeInOutSine" },
+                { id: "eid1", tween: [ "style", "${_manito1}", "left", '269px', { fromValue: '517px'}], position: 2250, duration: 500 },
                 { id: "eid2", tween: [ "style", "${_Text3}", "left", '48px', { fromValue: '-293px'}], position: 0, duration: 459 },
                 { id: "eid10", tween: [ "style", "${_Text4}", "left", '245px', { fromValue: '402px'}], position: 1879, duration: 371, easing: "easeInOutSine" }            ]
         }
@@ -173,10 +175,10 @@ var symbols = {
     content: {
             dom: [
                 {
-                    transform: [[0, 0], ['40']],
-                    id: 'manito',
                     type: 'image',
+                    id: 'manito',
                     rect: ['16px', '-130px', '110px', '92px', 'auto', 'auto'],
+                    transform: [[0, 0], ['40']],
                     fill: ['rgba(0,0,0,0)', 'images/manito.svg', '0px', '0px']
                 }
             ],

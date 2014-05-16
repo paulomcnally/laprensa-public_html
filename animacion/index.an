@@ -2,6 +2,7 @@
 {
 
 	"HTMLFileName":"index.html",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"symbol_stage":{
 		"dummyStageParentWidth":"400px",
 		"element_${_cel1}":{
@@ -9,39 +10,52 @@
 			"animationEnabled":"true",
 			"timelineColor3":"0x456a55",
 			"timelineColor":"0x50bd82"},
-		"element_${_Text3}":{
-			"timelineColor2":"0x168c84",
+		"dummyStageParentHeight":"400px",
+		"element_${_manito1}":{
+			"timelineColor2":"0x1095d2",
 			"animationEnabled":"true",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096"},
+			"timelineColor3":"0x29647e",
+			"timelineColor":"0x00a9fa"},
+		"element_${_manito3}":{
+			"timelineColor2":"0xcbbd71",
+			"animationEnabled":"false",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79"},
+		"defaultStageParentHeight":"400px",
+		"element_${_Rectangle}":{
+			"invisible":"false"},
+		"element_${_Text4}":{
+			"timelineColor2":"0x1aa38f",
+			"animationEnabled":"true",
+			"timelineColor3":"0x2a6a61",
+			"timelineColor":"0x00bda4"},
+		"defaultStageParentWidth":"400px",
 		"element_${_cel2}":{
 			"timelineColor2":"0x81aa62",
 			"animationEnabled":"true",
 			"timelineColor3":"0x5b6c4d",
 			"timelineColor":"0x91c767"},
-		"defaultStageParentHeight":"400px",
-		"dummyStageParentHeight":"400px",
-		"defaultStageParentWidth":"400px",
-		"element_${_manito3}":{
-			"timelineColor2":"0xcbbd71",
-			"animationEnabled":"true",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79"},
 		"element_${_Text2}":{
 			"timelineColor2":"0x326a96",
 			"animationEnabled":"true",
 			"timelineColor3":"0x385063",
 			"timelineColor":"0x2f73ad"},
-		"element_${_Text4}":{
-			"timelineColor2":"0x1aa38f",
+		"element_${_Text3}":{
+			"timelineColor2":"0x168c84",
 			"animationEnabled":"true",
-			"timelineColor3":"0x2a6a61",
-			"timelineColor":"0x00bda4"}},
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096"}},
+	"TransitionIdCounter":"4",
 	"CompZoomFactor":"100",
 	"StageZoomFactor":"100",
+	"pixelsPerMs":"0.2",
+	"stage-Default Timeline_mark_ms":"-1",
+	"pref__general__GenerateSmoothTransitions":"true",
 	"usedBOM":"false",
-	"nextElementColorIndex":"7",
-	"stage-Default Timeline_playhead_ms":"3082",
+	"nextElementColorIndex":"8",
+	"stage-Default Timeline_playhead_ms":"3750",
+	"pref__general__AutoKeyframeProperties":"true",
+	"viewStartY":"0",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -61,5 +75,4 @@
    \"timelines\": {\
 \
    }}\
-}",
-	"viewStartY":"0"}
+}"}

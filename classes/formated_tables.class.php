@@ -2716,15 +2716,24 @@ class scoreboardTable extends Table
         $this->title = 'Marcador de Partidos';
         $this->key = 'idscoreboard';
         $this->order = 'idscoreboard DESC';
-        $this->is_detail = true;
-        $this->addColumn('idopcionespic', 'serial', 0, 1, 0, 'Id');
-        $this->addColumn('idencuestapic', 'int', 0, 0, 'encuestapic', 'Encuesta');
-        $this->addColumn('titulo', 'varchar', 100, 0, 0, 'Titulo foto');
+        $this->is_detail = false;
+        $this->addColumn('idscoreboard', 'serial', 0, 1, 0, 'Id');
+        $this->addColumn('scoreboard', 'varchar', 255, 0, 0, 'Partido');
         $this->addColumn('descripcion', 'xhtml', 0, 0, 0, 'Descripcion foto');
-        $this->addColumn('opcionespic', 'image', 0, 0, 0, 'Foto', array(
-            'sizes' => '640x200x1,640x300x1,600x400,397x200x1,300x100x1,360x122x1,271x165x1,270x280x1,397x122x1,288x318,232x155,150x100x1,138x90,120x90x1,150x150x1,77x77x1,53x82x1,48x48x1,1024x1024'
+        $this->addColumn('bgimage', 'image', 0, 0, 0, 'Imagen de fondo', array(
+            'sizes' => '685x400,685x400x1,700x400,700x400x1'
         ));
-        $this->addColumn('votos', 'auto', 0, 0, 0, 'Resultado');
+        $this->addColumn('team_home', 'varchar', 100, 0, 0, 'Equipo 1');
+        $this->addColumn('score_home', 'varchar', 100, 0, 0, 'Marcador Equipo 1');
+        $this->addColumn('teamlogo_home', 'image', 0, 0, 0, 'Logo equipo 1', array(
+            'sizes' => '80x80,80x80x1,140x140,140x140x1,150x150'
+        ));
+        $this->addColumn('team_away', 'varchar', 100, 0, 0, 'Equipo 2');
+        $this->addColumn('score_away', 'varchar', 100, 0, 0, 'Marcador Equipo 2');
+        $this->addColumn('teamlogo_away', 'image', 0, 0, 0, 'Logo equipo 1', array(
+            'sizes' => '80x80,80x80x1,140x140,140x140x1,150x150'
+        ));
+        $this->addColumn('finished', 'bool', 0, 0, 0, 'Finalizado?');
         $this->addColumn('creacion', 'auto', 0, 0, 0, 'Fecha Creación:');
         $this->addColumn('idusuario', 'int', 0, 0, 'na_usuario', 'Usuario', array(
             'display' => 'usuario'

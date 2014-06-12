@@ -54,6 +54,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402564044426-0');
 </div>
 EOT;
 
+$banner_250x250_mundial = <<<EOT
+<!-- Mundial-Play-250x250 -->
+<div id='div-gpt-ad-1402605150966-0' style='width:250px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402605150966-0'); });
+</script>
+</div>
+EOT;
+
 $smarty->assign('adserver_header',"<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
 </script>
 <script type='text/javascript'>
@@ -94,6 +103,7 @@ node.parentNode.insertBefore(gads, node);
 googletag.cmd.push(function() {
 googletag.defineSlot('/11648707/Portada_Mundial_300x250_inferior', [300, 250], 'div-gpt-ad-1402563808229-0').addService(googletag.pubads());
 googletag.defineSlot('/11648707/Portada_Mundial_300x250_sidebar', [300, 250], 'div-gpt-ad-1402564044426-0').addService(googletag.pubads());
+googletag.defineSlot('/11648707/Mundial-Play-250x250', [250, 250], 'div-gpt-ad-1402605150966-0').addService(googletag.pubads());
 googletag.pubads().enableSingleRequest();
 googletag.enableServices();
 });
@@ -112,4 +122,5 @@ $smarty->assign('banner_derecho_300_250', $banner_derecho_300_250);
 $smarty->assign('boton_inferior_260_90', $boton_inferior_260_90);
 
 $smarty->assign('banner_300x250_mundial', $banner_300x250_mundial);
+$smarty->assign('banner_250x250_mundial', $banner_250x250_mundial);
 ?>

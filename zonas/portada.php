@@ -199,6 +199,21 @@ GA_googleFillSlot('LA_PRENSA_Portada_125x125_3B');
 <script type="text/javascript">
 GA_googleFillSlot("LP_300x100_2_Portada");
 </script>';
+
+  $portada_intersitial = '<div id="div-gpt-ad-1400537245820-0" style="width:512px; height:468px;">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display("div-gpt-ad-1400537245820-0"); });
+</script>
+</div>';
+
+  $portada_marcador_mundial = <<<EOT
+<!-- Marcador-Mundial-700x70-Portada -->
+<div id='div-gpt-ad-1402523004045-0' style='width:700px; height:70px;'>
+<script type="text/javascript">
+GA_googleFillSlot("Marcador-Mundial-700x70-Portada");
+</script>';
+</div>
+EOT;
   
   $smarty->assign('adserver_header',"<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
 </script>
@@ -248,6 +263,8 @@ GA_googleAddSlot('ca-pub-1199834677431615', 'LA_PRENSA_Portada_Activos_300x100_1
 GA_googleAddSlot('ca-pub-1199834677431615', 'LA_PRENSA_Portada_Activos_300x100_2');
 GA_googleAddSlot('ca-pub-1199834677431615', 'LA_PRENSA_Portada_Activos_300x100_3');
 GA_googleAddSlot('ca-pub-1199834677431615', 'LP_300x100_2_Portada');
+GA_googleAddSlot('ca-pub-1199834677431615', 'Inicio_Interstitial_512x438');
+GA_googleAddSlot('ca-pub-1199834677431615', 'Marcador-Mundial-700x70-Portada');
 </script>
 <script type='text/javascript'>
 GA_googleFetchAds();
@@ -294,4 +311,6 @@ GA_googleFetchAds();
   $smarty->assign('portada_activos_300x100_2', $portada_Activos_300x100_2);
   $smarty->assign('portada_activos_300x100_3', $portada_Activos_300x100_3);
   $smarty->assign('portada_300x100_2', $portada_300x100_2);
+  $smarty->assign('portada_intersitial', $portada_intersitial);
+  $smarty->assign('portada_marcador_mundial', $portada_marcador_mundial);
 ?>

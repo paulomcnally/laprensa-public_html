@@ -289,7 +289,7 @@ if ($tpl_id) {
     # <Elecciones 2011>
     #
     $comentario = new comentarioTable;
-    $comentarios_electorales = $comentario->readDataSql("SELECT idcomentario,comentario,nombre,comentario.idnoticia FROM comentario JOIN noticia USING(idnoticia) JOIN seccion USING (idseccion) WHERE comentario.estado='A' AND idseccion = 51 ORDER BY idcomentario LIMIT 5");
+    // $comentarios_electorales = $comentario->readDataSql("SELECT idcomentario,comentario,nombre,comentario.idnoticia FROM comentario JOIN noticia USING(idnoticia) JOIN seccion USING (idseccion) WHERE comentario.estado='A' AND idseccion = 51 ORDER BY idcomentario LIMIT 5");
     $smarty->assign('comentarios_electorales', $comentarios_electorales);
     unset($comentario);
       $pagina = new paginaTable();

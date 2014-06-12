@@ -306,6 +306,9 @@ if(!$smarty->is_cached('portada_destacado.tpl',$cache_pattern)) {
   $smarty->assign('vidnews',$vidnews);
   unset($vidnews);
 
+  #noticias mundial 2014
+  include_once('./noticias_mundial.inc.php');
+
   # Noticias Electorales  
   # $notielectoral = new noticiaTable();
   $save = $noticia->limit;
@@ -367,6 +370,18 @@ if(!$smarty->is_cached('portada_economia.tpl',$cache_pattern)) {
   $smarty->assign('negocios',$negocios);
   $smarty->assign('negocios1',$negocios1);
   $smarty->assign('negocios2',$negocios2);
+
+
+
+//echo '<br> NEGOCIOS<br>';
+//echo var_dump($negocios);
+//echo '<br> NEGOCIOS  1<br>';
+//echo var_dump($negocios1);
+//echo '<br> NEGOCIOS  2<br>';
+//echo var_dump($negocios2);
+
+
+
 
   # Cambio oficial para nicaragua
   $dolares = new dolarTable();

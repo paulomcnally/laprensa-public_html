@@ -242,6 +242,11 @@ if ($tpl_id) {
   $tpl = 'noticias.tpl';
   $tpl_id = $_REQUEST['uri'];
 
+  #noticias mundial 2014
+  include_once('./noticias_mundial.inc.php');
+  # Marcadores
+  include_once ('./marcador.inc.php');
+
   # FIXME: escribir function is_it_funny? para descartar URIs evidentemente errados
   # if (is_it_funny($tpl_id)) die('funny URI');
 

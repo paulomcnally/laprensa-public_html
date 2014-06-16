@@ -550,7 +550,7 @@ class edicionTable extends Table {
     $this->addColumn('w_icon','auto',0,0,0,'Icono');
     $this->addColumn('w_url','auto',0,0,0,'URL');
 $this->addColumn('show_live_broadcast','bool',0,0,0,'LiveStream');
-    $this->addColumn('show_specials','int',0,0,0,'LiveStream Especiales');
+    $this->addColumn('show_specials','int',0,0,0,'LiveStream Especiales',array('default'=>5));
     $this->addColumn('livestream_embed','xhtml',0,0,0,'LiveStream Embed',array('style'=>'width:700px;height:300px;'));
     $this->addColumn('idusuario','int',0,0,'na_usuario','Usuario',array('display'=>'usuario'));
     $this->addColumn('na_usuario.nombre','external');

@@ -39,17 +39,19 @@ $boton_inferior_260_90 = "<script type='text/javascript'>
 GA_googleFillSlot('LA_PRENSA_Play_260x90_boton_inferior');
 </script>";
 
-$banner_300x250_mundial = <<<EOT
+$banner_300x250_mundial_1 = <<<EOT
 <!-- Portada_Mundial_300x250_inferior -->
 <div id='div-gpt-ad-1402563808229-0' style='width:300px; height:250px; float:left; margin-left:40px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402563808229-0'); });
+GA_googleFillSlot('Portada_Mundial_300x250_inferior');
 </script>
 </div>
+EOT;
+$banner_300x250_mundial_2 = <<<EOT
 <!-- Portada_Mundial_300x250_sidebar -->
 <div id='div-gpt-ad-1402564044426-0' style='width:300px; height:250px; float:left; margin-left:60px'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402564044426-0'); });
+GA_googleFillSlot('Portada_Mundial_300x250_sidebar');
 </script>
 </div>
 EOT;
@@ -58,7 +60,7 @@ $banner_250x250_mundial = <<<EOT
 <!-- Mundial-Play-250x250 -->
 <div id='div-gpt-ad-1402605150966-0' style='width:250px; height:250px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1402605150966-0'); });
+GA_googleFillSlot('Mundial-Play-250x250');
 </script>
 </div>
 EOT;
@@ -80,33 +82,13 @@ GA_googleAddSlot('ca-pub-1199834677431615', 'LA_PRENSA_Play_728x90_Superior');
 GA_googleAddSlot('ca-pub-1199834677431615', 'LP_Play_160x600_lateral_1');
 GA_googleAddSlot('ca-pub-1199834677431615', 'LP_Play_160x600_lateral_2');
 GA_googleAddSlot('ca-pub-1199834677431615', 'LA_PRENSA_Play_260x90_boton_inferior');
+
+GA_googleAddSlot('ca-pub-1199834677431615', 'Portada_Mundial_300x250_inferior');
+GA_googleAddSlot('ca-pub-1199834677431615', 'Portada_Mundial_300x250_sidebar');
+GA_googleAddSlot('ca-pub-1199834677431615', 'Mundial-Play-250x250');
 </script>
 <script type='text/javascript'>
 GA_googleFetchAds();
-</script>
-<script type='text/javascript'>
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
-(function() {
-var gads = document.createElement('script');
-gads.async = true;
-gads.type = 'text/javascript';
-var useSSL = 'https:' == document.location.protocol;
-gads.src = (useSSL ? 'https:' : 'http:') + 
-'//www.googletagservices.com/tag/js/gpt.js';
-var node = document.getElementsByTagName('script')[0];
-node.parentNode.insertBefore(gads, node);
-})();
-</script>
-
-<script type='text/javascript'>
-googletag.cmd.push(function() {
-googletag.defineSlot('/11648707/Portada_Mundial_300x250_inferior', [300, 250], 'div-gpt-ad-1402563808229-0').addService(googletag.pubads());
-googletag.defineSlot('/11648707/Portada_Mundial_300x250_sidebar', [300, 250], 'div-gpt-ad-1402564044426-0').addService(googletag.pubads());
-googletag.defineSlot('/11648707/Mundial-Play-250x250', [250, 250], 'div-gpt-ad-1402605150966-0').addService(googletag.pubads());
-googletag.pubads().enableSingleRequest();
-googletag.enableServices();
-});
 </script>
 ");
 $smarty->assign('banner_superior_728_90', $banner_superior_728_90);
@@ -121,6 +103,7 @@ $smarty->assign('banner_160x600_lateral_2',$banner_160x600_lateral_2);
 $smarty->assign('banner_derecho_300_250', $banner_derecho_300_250);
 $smarty->assign('boton_inferior_260_90', $boton_inferior_260_90);
 
-$smarty->assign('banner_300x250_mundial', $banner_300x250_mundial);
+$smarty->assign('banner_300x250_mundial_1', $banner_300x250_mundial_1);
+$smarty->assign('banner_300x250_mundial_2', $banner_300x250_mundial_2);
 $smarty->assign('banner_250x250_mundial', $banner_250x250_mundial);
 ?>

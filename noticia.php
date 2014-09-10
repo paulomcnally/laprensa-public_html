@@ -52,7 +52,7 @@ if ($tpl_id) {
     $tipo = new seccionTable;
     $tipo->readEnv();
     #list($row) = $noticia->readDataFilter("noticia.estado='A' AND noticia.idnoticia='". $noticia->request['idnoticia'] ."'");
-    list($row) = $noticia->readDataFilter("edicion.edicion = '" . $idedicion . "' AND seccion.uri = '" . $noticia->database->escape($_REQUEST['uri'])  . "' AND noticia.idnoticia='". $noticia->request['idnoticia'] ."'");
+    list($row) = $noticia->readDataFilter("edicion.edicion = '" . $idedicion . "' AND seccion.uri = '" . $noticia->database->escape($_REQUEST['uri'])  . "' AND noticia.idnoticia='". $noticia->request['idnoticia'] ."' AND noticia.estado = 'A'");
     #list($row) = $noticia->readDataFilter("noticia.idnoticia='". $noticia->request['idnoticia'] ."'");
     # Votacion
     if($row) {
